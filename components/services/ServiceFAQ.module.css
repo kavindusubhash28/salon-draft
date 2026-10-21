@@ -1,0 +1,135 @@
+.section {
+  padding: 6rem 0;
+  background: #09090b;
+  position: relative;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #9c9a92;
+  line-height: 1.6;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background: #121217;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faqItemOpen {
+  border-color: rgba(200, 162, 101, 0.4);
+}
+
+.questionBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 1.5rem;
+}
+
+.iconWrap {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.iconWrapRotated {
+  transform: rotate(180deg);
+}
+
+.answerBox {
+  padding: 0 1.75rem 1.5rem;
+  font-size: 0.92rem;
+  color: #9c9a92;
+  line-height: 1.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1rem;
+}
+
+.helpBox {
+  margin-top: 3.5rem;
+  background: #141419;
+  border: 1px solid rgba(200, 162, 101, 0.25);
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.helpBox h4 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.helpBox p {
+  font-size: 0.88rem;
+  color: #a9a8a3;
+  max-width: 500px;
+}
+
+.whatsappHelpBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25d366;
+  color: #0b0b0d;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+}

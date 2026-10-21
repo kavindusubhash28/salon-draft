@@ -1,0 +1,145 @@
+.section {
+  padding: 5rem 0;
+  background: #0d0d10;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mapFrameWrap {
+  border: 1px solid var(--accent-gold);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 440px;
+  background: #15151b;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: invert(90%) hue-rotate(180deg) contrast(90%);
+}
+
+.mapNotice {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(11, 11, 13, 0.9);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.directionsContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 0.95rem;
+  color: #a9a8a3;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.landmarkList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.landmarkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.landmarkIcon {
+  color: var(--accent-gold);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.landmarkItem strong {
+  color: #ffffff;
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.landmarkItem span {
+  font-size: 0.82rem;
+  color: #8c8a82;
+  line-height: 1.5;
+}
+
+.getDirectionsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #c8a265;
+  color: #0b0b0d;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.6rem;
+  border-radius: 2px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.getDirectionsBtn:hover {
+  background: #dfc28e;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .mapFrameWrap {
+    height: 340px;
+  }
+}

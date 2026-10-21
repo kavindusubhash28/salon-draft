@@ -1,0 +1,148 @@
+.section {
+  padding: 6rem 0;
+  background: #0d0d10;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #9c9a92;
+  line-height: 1.6;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.spaceCard {
+  background: #141419;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.spaceCard:hover {
+  border-color: rgba(200, 162, 101, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.imageWrap {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.spaceImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.spaceCard:hover .spaceImg {
+  transform: scale(1.05);
+}
+
+.contentWrap {
+  padding: 1.75rem 1.5rem;
+}
+
+.spaceTag {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.spaceTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.spaceDesc {
+  font-size: 0.88rem;
+  color: #8c8a82;
+  line-height: 1.6;
+}
+
+.featuresStrip {
+  background: #121217;
+  border: 1px solid rgba(200, 162, 101, 0.2);
+  padding: 2rem;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.featureBox h5 {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.featureBox p {
+  font-size: 0.8rem;
+  color: #8c8a82;
+}
+
+@media (max-width: 992px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  .featuresStrip {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .featuresStrip {
+    grid-template-columns: 1fr;
+  }
+}

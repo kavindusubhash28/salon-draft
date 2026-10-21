@@ -1,0 +1,150 @@
+.section {
+  padding: 6rem 0;
+  background: #0d0d10;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #9c9a92;
+  line-height: 1.6;
+}
+
+.transGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.transCard {
+  background: #14141a;
+  border: 1px solid rgba(200, 162, 101, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.compareFrame {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  background: #000000;
+}
+
+.photoWrap {
+  position: relative;
+  height: 360px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoBadgeBefore, .photoBadgeAfter {
+  position: absolute;
+  bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+}
+
+.photoBadgeBefore {
+  left: 1rem;
+  background: rgba(18, 18, 22, 0.85);
+  color: #a9a8a3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.photoBadgeAfter {
+  right: 1rem;
+  background: var(--accent-gold);
+  color: #0b0b0d;
+}
+
+.dividerLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--accent-gold);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.transBody {
+  padding: 2rem 1.75rem;
+}
+
+.transTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.transMeta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.transStory {
+  font-size: 0.9rem;
+  color: #9c9a92;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .transGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .photoWrap {
+    height: 260px;
+  }
+}

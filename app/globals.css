@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0b0b0d;
+  --bg-secondary: #121216;
+  --bg-surface: #18181f;
+  --bg-surface-elevated: #22222a;
+  
+  --text-primary: #f8f8f7;
+  --text-secondary: #a9a8a3;
+  --text-muted: #73726d;
+  
+  --accent-gold: #c8a265;
+  --accent-gold-light: #dfc28e;
+  --accent-gold-dark: #9f7c43;
+  --accent-gold-subtle: rgba(200, 162, 101, 0.12);
+  --accent-gold-glow: rgba(200, 162, 101, 0.25);
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(200, 162, 101, 0.35);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-serif);
+  letter-spacing: 0.03em;
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.bg-gold {
+  background-color: var(--accent-gold);
+}
+
+/* Authentic Barber Badge Border & Ribbons */
+.barber-badge-border {
+  border: 1px solid var(--border-gold);
+  position: relative;
+}
+
+.barber-badge-border::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(200, 162, 101, 0.18);
+  pointer-events: none;
+}
+
+/* Subtle textured noise or vintage grain */
+.vintage-overlay {
+  background-image: radial-gradient(rgba(200, 162, 101, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-elevated);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-dark);
+}
+
+/* Transitions */
+a, button {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
