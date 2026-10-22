@@ -1,172 +1,181 @@
 .footer {
-  background-color: #0d0b0a;
-  color: #f7f4ee;
-  padding: 5rem 2rem 4rem;
+  background-color: #080706;
+  color: #ffffff;
+  padding: 60px 0 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .mainGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.2fr 0.9fr 1.1fr 1.3fr 1.1fr;
+  gap: 32px;
+  margin-bottom: 50px;
 }
 
-@media (min-width: 600px) {
-  .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .mainGrid {
-    grid-template-columns: 0.8fr 1fr 1.1fr 1.3fr 1.3fr;
-    gap: 2.5rem;
-  }
-}
-
-/* Column 1: Logo */
+/* Column 1: Logo & Tagline */
 .logoCol {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .logoWrap {
-  width: 76px;
-  height: 76px;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease;
-}
-
-.logoWrap:hover {
-  transform: scale(1.05);
+  border: 1px solid rgba(197, 146, 90, 0.3);
 }
 
 .logoImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* Column Titles */
-.colTitle {
-  font-family: var(--font-sans);
+.brandName {
+  font-family: var(--font-serif, "Playfair Display", serif);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: #ffffff;
-  margin: 0 0 1.25rem;
+  margin: 0;
+}
+
+.brandTagline {
+  font-size: 0.82rem;
+  color: #8c8278;
+  margin: 0;
+}
+
+/* Columns: Titles & Lists */
+.colTitle {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
   letter-spacing: 0.02em;
 }
 
-/* Links List */
 .linkList {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 10px;
 }
 
 .linkItem {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: #a89f95;
+  color: #9c9288;
   text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
-  display: inline-block;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
 }
 
-.linkItem:hover {
-  color: #ffffff;
-  transform: translateX(2px);
-}
-
+.linkItem:hover,
 .linkItemActive {
   color: #c5925a;
-  font-weight: 600;
 }
 
 /* Contact List */
 .contactList {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 12px;
 }
 
 .contactItem {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: #a89f95;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #9c9288;
+  line-height: 1.45;
 }
 
 .contactIcon {
   color: #c5925a;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .contactItem a {
-  color: #a89f95;
+  color: #9c9288;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .contactItem a:hover {
-  color: #ffffff;
+  color: #c5925a;
 }
 
-/* Brand Ornament Column */
-.ornamentCol {
+/* Follow Us Column */
+.followList {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  font-family: var(--font-sans);
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
-@media (min-width: 1024px) {
-  .ornamentCol {
-    align-items: flex-end;
-    text-align: right;
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9c9288;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: #c5925a;
+}
+
+.followText {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #736960;
+  margin: 0;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6d645b;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
   }
 }
 
-.ornamentLine {
-  width: 50px;
-  height: 1px;
-  background-color: #c5925a;
-  margin-bottom: 1.25rem;
-}
+@media (max-width: 680px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-.brandTitle {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #ffffff;
-  margin: 0 0 0.6rem;
-  text-transform: uppercase;
-}
-
-.brandTagline {
-  font-size: 0.78rem;
-  line-height: 1.5;
-  color: #a89f95;
-  margin: 0 0 1rem;
-}
-
-.copyrightText {
-  font-size: 0.72rem;
-  line-height: 1.45;
-  color: #635b54;
-  margin: 0;
+  .bottomBar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }

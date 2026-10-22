@@ -1,0 +1,266 @@
+.bookingSection {
+  position: relative;
+  width: 100%;
+  background-color: #12100e;
+  background-image: url("/images/experience_chair.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.bookingOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 16, 14, 0.92) 0%,
+    rgba(18, 16, 14, 0.88) 40%,
+    rgba(18, 16, 14, 0.94) 100%
+  );
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Column */
+.infoCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.overline {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c5925a;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #c8beb3;
+  margin-bottom: 32px;
+}
+
+/* Highlight Box */
+.confirmBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(197, 146, 90, 0.08);
+  border: 1px solid rgba(197, 146, 90, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.confirmIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #c5925a;
+  color: #12100e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.confirmTitle {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.confirmText {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #c8beb3;
+  margin: 0;
+}
+
+/* Cursive Flourish on left */
+.cursiveFlourish {
+  font-family: var(--font-cursive, "Caveat", "Brush Script MT", cursive);
+  font-size: 2.6rem;
+  line-height: 1.15;
+  color: rgba(220, 205, 185, 0.7);
+  transform: rotate(-8deg);
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+/* Right Column: Form Card */
+.formCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  color: #1a1614;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2b2520;
+}
+
+.requiredStar {
+  color: #d9534f;
+  margin-left: 3px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputField,
+.selectField,
+.textareaField {
+  width: 100%;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.9rem;
+  color: #1a1614;
+  background-color: #faf8f5;
+  border: 1px solid #e0d8ce;
+  border-radius: 6px;
+  padding: 12px 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.inputField:focus,
+.selectField:focus,
+.textareaField:focus {
+  border-color: #c5925a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(197, 146, 90, 0.15);
+}
+
+.inputWithIcon {
+  padding-right: 40px;
+}
+
+.fieldIcon {
+  position: absolute;
+  right: 14px;
+  color: #9c9288;
+  pointer-events: none;
+}
+
+.textareaField {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.submitBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #c5925a 0%, #b37346 100%);
+  color: #ffffff;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 15px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(179, 115, 70, 0.3);
+  margin-top: 6px;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(90deg, #d4a066 0%, #c48253 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(179, 115, 70, 0.45);
+}
+
+.successAlert {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .formCard {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bookingSection {
+    padding: 60px 0;
+  }
+}

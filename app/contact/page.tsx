@@ -1,22 +1,26 @@
 import type { Metadata } from "next";
-import ContactDetails from "@/components/contact/ContactDetails";
-import LocationMap from "@/components/contact/LocationMap";
-import BusinessHours from "@/components/contact/BusinessHours";
-import AppointmentCTA from "@/components/home/AppointmentCTA";
+import ContactHero from "@/components/contact/ContactHero";
+import ContactInfoCards from "@/components/contact/ContactInfoCards";
+import ContactBookingForm from "@/components/contact/ContactBookingForm";
+import ContactLocation from "@/components/contact/ContactLocation";
+import ContactFAQ from "@/components/contact/ContactFAQ";
+import ContactCTA from "@/components/contact/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Contact & Location | Three Brothers Salon Cuts",
+  title: "Contact & Book Appointment | Three Brothers Salon Cuts",
   description:
-    "Find Three Brothers Salon Cuts on Galle Road, Colombo 03 opposite Liberty Arcade. View working hours, phone numbers, WhatsApp, and parking directions.",
+    "Let's book your next look. Get in touch with Three Brothers Salon Cuts at Maharagama, Colombo. Reserve appointments, view opening hours, and direct WhatsApp booking.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <ContactDetails />
-      <LocationMap />
-      <BusinessHours />
-      <AppointmentCTA />
+      <ContactHero />
+      <ContactInfoCards />
+      <ContactBookingForm />
+      <ContactLocation />
+      <ContactFAQ />
+      <ContactCTA />
     </>
   );
 }

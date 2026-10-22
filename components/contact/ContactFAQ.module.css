@@ -1,0 +1,154 @@
+.faqSection {
+  background-color: #faf7f2;
+  padding: 80px 0 100px;
+  width: 100%;
+  border-top: 1px solid rgba(197, 146, 90, 0.15);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.overline {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #b37346;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #1a1614;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #635b54;
+  margin-bottom: 30px;
+}
+
+.graphicWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.graphicImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.graphicWrapper:hover .graphicImg {
+  transform: scale(1.03);
+}
+
+/* Right: Accordion Column */
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordionItem {
+  background-color: #ffffff;
+  border: 1px solid #e8e2d9;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordionItem:hover {
+  border-color: rgba(197, 146, 90, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.accordionButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1614;
+  transition: color 0.2s ease;
+}
+
+.accordionButton:hover {
+  color: #b37346;
+}
+
+.toggleIcon {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #1a1614;
+  line-height: 1;
+  margin-left: 16px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.accordionContent {
+  padding: 0 22px 20px;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #635b54;
+  border-top: 1px solid #f3eee7;
+  padding-top: 14px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faqSection {
+    padding: 50px 0;
+  }
+
+  .accordionButton {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+
+  .accordionContent {
+    padding: 0 16px 16px;
+  }
+}
