@@ -7,24 +7,17 @@ import styles from "./ServicesOverview.module.css";
 export default function ServicesOverview() {
   const serviceCards = [
     {
-      id: "hair-care-styling",
-      title: "Hair Care & Styling",
-      desc: "Gents & ladies cuts, skin fades, layer cuts, hair coloring, and styling.",
-      image: "/images/service_haircut.jpg",
+      id: "haircuts-beard",
+      title: "Haircuts & Beard Grooming",
+      desc: "Precision haircuts, skin fades, beard styling, and hot towel razor shaves.",
+      image: "/images/Services/beard.jpg",
       href: "/services#what-we-offer",
     },
     {
       id: "treatments",
-      title: "Treatments",
-      desc: "Hair conditioning, keratin smoothing, and deep oil treatments.",
+      title: "Hair Treatments & Care",
+      desc: "Hair conditioning, restorative keratin smoothing, and deep oil treatments.",
       image: "/images/Services/treatments.jpg",
-      href: "/services#what-we-offer",
-    },
-    {
-      id: "grooming-beard",
-      title: "Grooming & Beard",
-      desc: "Beard styling, grooming, and luxury hot towel straight razor shaves.",
-      image: "/images/Services/beard.jpg",
       href: "/services#what-we-offer",
     },
     {
@@ -37,15 +30,8 @@ export default function ServicesOverview() {
     {
       id: "nails",
       title: "Nails & Pedicure",
-      desc: "Classic manicures, durable gel pedicures, and jelly pedicure spa.",
+      desc: "Classic manicures, long-lasting gel pedicures, and jelly pedicure spa.",
       image: "/images/Services/nails.jpg",
-      href: "/services#what-we-offer",
-    },
-    {
-      id: "beauty-dressing",
-      title: "Beauty & Dressing",
-      desc: "Event makeup artistry and elegant wedding & occasion dressing.",
-      image: "/images/service_occasion.jpg",
       href: "/services#what-we-offer",
     },
   ];
