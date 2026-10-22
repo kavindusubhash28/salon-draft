@@ -1,16 +1,27 @@
 .navbarHeader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
-  padding: 1.5rem 2rem;
+  z-index: 100;
+  padding: 1.25rem 2.5rem;
   background: linear-gradient(
     to bottom,
-    rgba(14, 12, 10, 0.75) 0%,
-    rgba(14, 12, 10, 0.3) 60%,
+    rgba(14, 12, 10, 0.88) 0%,
+    rgba(14, 12, 10, 0.4) 70%,
     transparent 100%
   );
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrolled state: compact bar with luxury glassmorphism */
+.navbarScrolled {
+  padding: 0.75rem 2.5rem;
+  background: rgba(14, 12, 10, 0.95);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(197, 146, 90, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
 }
 
 .container {
@@ -21,6 +32,7 @@
   justify-content: space-between;
 }
 
+/* Big Brand Logo */
 .brandLink {
   display: inline-flex;
   align-items: center;
@@ -28,18 +40,28 @@
 }
 
 .logoWrapper {
-  width: 54px;
-  height: 54px;
+  position: relative;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(197, 146, 90, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #12100e;
+}
+
+.logoWrapperScrolled {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(197, 146, 90, 0.6);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .logoWrapper:hover {
   transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: #c5925a;
+  box-shadow: 0 0 20px rgba(197, 146, 90, 0.35);
 }
 
 .logoImg {
@@ -49,12 +71,13 @@
   display: block;
 }
 
-/* Desktop Nav Links */
+/* Desktop Horizontal Nav Links (shown only when NOT scrolled) */
 .desktopNav {
   display: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .desktopNav {
     display: block;
   }
@@ -75,8 +98,9 @@
 
 .navLink {
   color: #f2eee8;
-  font-size: 0.88rem;
-  font-weight: 400;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
   letter-spacing: 0.02em;
   padding-bottom: 6px;
@@ -90,7 +114,7 @@
 
 .navLinkActive {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .activeIndicator {
@@ -98,27 +122,30 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1.5px;
-  background-color: #ffffff;
+  height: 2px;
+  background-color: #c5925a;
   border-radius: 1px;
 }
 
-/* Right Actions */
+/* Right Actions Container */
 .rightActions {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+/* Book Button */
 .bookBtn {
   display: none;
   border: 1px solid #c5925a;
   background-color: #c5925a;
-  color: #1a1614;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0.65rem 1.35rem;
+  color: #12100e;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem;
   border-radius: 4px;
   text-decoration: none;
   align-items: center;
@@ -134,71 +161,286 @@
 }
 
 .bookBtn:hover {
-  background-color: #b37346;
-  border-color: #b37346;
+  background-color: #d8a56d;
+  border-color: #d8a56d;
+  color: #12100e;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(197, 146, 90, 0.45);
+}
+
+/* Hamburger Icon Button (changes to this when scrolled, or on mobile) */
+.hamburgerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(26, 22, 20, 0.85);
+  border: 1px solid rgba(197, 146, 90, 0.35);
   color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.hamburgerBtn:hover {
+  background: #c5925a;
+  color: #12100e;
+  border-color: #c5925a;
+  box-shadow: 0 0 16px rgba(197, 146, 90, 0.4);
   transform: translateY(-1px);
 }
 
-.mobileToggle {
-  display: block;
-  background: none;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0.35rem;
+.hamburgerIcon {
+  color: #c5925a;
+  transition: color 0.25s ease;
 }
 
-@media (min-width: 768px) {
+.hamburgerBtn:hover .hamburgerIcon {
+  color: #12100e;
+}
+
+/* Mobile Toggle Button (when not scrolled on mobile) */
+.mobileToggle {
+  display: block;
+  background: rgba(18, 16, 14, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.mobileToggle:hover {
+  border-color: #c5925a;
+  color: #c5925a;
+}
+
+@media (min-width: 900px) {
   .mobileToggle {
     display: none;
   }
 }
 
-/* Mobile Drawer */
-.mobileDrawer {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(18, 16, 14, 0.98);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.5rem 2rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+/* Luxury Slide-Out Drawer / Modal Menu */
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 7, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.mobileNavLinks {
+.drawerPanel {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 100vh;
+  background: #14110f;
+  border-left: 1px solid rgba(197, 146, 90, 0.25);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  padding: 32px 36px 40px;
+  overflow-y: auto;
+  animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.mobileNavLink {
-  color: #d8d2c9;
-  font-size: 1rem;
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawerBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.mobileNavLinkActive {
-  color: #ffffff;
-  font-weight: 600;
+.drawerLogoWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(197, 146, 90, 0.4);
 }
 
-.mobileBookBtn {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: #b37346;
+.drawerBrandTitle {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #ffffff;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.8rem;
-  border-radius: 2px;
+}
+
+.closeBtn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #c5925a;
+  border-color: #c5925a;
+  color: #12100e;
+  transform: rotate(90deg);
+}
+
+/* Drawer Nav Links */
+.drawerNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.drawerNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-size: 1.6rem;
+  color: #e5ded6;
   text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.drawerNavLink:hover {
+  color: #c5925a;
+  transform: translateX(6px);
+}
+
+.drawerNavLinkActive {
+  color: #c5925a;
+  font-weight: 700;
+}
+
+.drawerIndex {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.75rem;
+  color: #8c8278;
   font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* Drawer Quick Info & CTA */
+.drawerFooter {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawerInfoRow {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #a89f95;
+}
+
+.drawerInfoRow strong {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.drawerBookBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #c5925a;
+  color: #12100e;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(197, 146, 90, 0.35);
+}
+
+.drawerBookBtn:hover {
+  background-color: #d8a56d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(197, 146, 90, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .navbarHeader {
+    padding: 1rem 1.25rem;
+  }
+
+  .navbarScrolled {
+    padding: 0.6rem 1.25rem;
+  }
+
+  .logoWrapper {
+    width: 68px;
+    height: 68px;
+  }
+
+  .logoWrapperScrolled {
+    width: 48px;
+    height: 48px;
+  }
+
+  .drawerPanel {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .drawerNavLink {
+    font-size: 1.35rem;
+  }
 }
