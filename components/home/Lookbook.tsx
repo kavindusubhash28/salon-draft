@@ -1,49 +1,106 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Eye } from "lucide-react";
-import { GALLERY_ITEMS } from "@/lib/salon-data";
+import { ArrowRight } from "lucide-react";
 import styles from "./Lookbook.module.css";
 
 export default function Lookbook() {
-  const previewItems = GALLERY_ITEMS.slice(0, 4);
-
   return (
     <section className={styles.section}>
       <div className={styles.container}>
+        {/* Header row */}
         <div className={styles.headerRow}>
-          <div className={styles.headerText}>
-            <span className={styles.subheading}>Atelier Portfolio</span>
-            <h2 className={styles.title}>The Seasonal Lookbook</h2>
+          <div className={styles.titleColumn}>
+            <span className={styles.categoryLabel}>02 / THE LOOKBOOK</span>
+            <h2 className={styles.title}>
+              Styles that speak
+              <br />
+              for themselves.
+            </h2>
           </div>
-          <Link href="/work" className={styles.viewAllLink}>
-            <span>View Full Gallery &amp; Transformations</span>
-            <ArrowRight size={15} />
-          </Link>
+
+          <div className={styles.descColumn}>
+            <p className={styles.headerDesc}>
+              A look at our recent work. Real people. Real styles. Find
+              inspiration for your next visit.
+            </p>
+          </div>
+
+          <div className={styles.btnColumn}>
+            <Link href="/work" className={styles.exploreBtn}>
+              <span>EXPLORE OUR WORK</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
 
+        {/* Asymmetrical 4-Column Gallery Grid */}
         <div className={styles.galleryGrid}>
-          {previewItems.map((item) => (
-            <Link key={item.id} href="/work" className={styles.galleryCard}>
+          {/* Column 1: Modern Fade (Tall) */}
+          <div className={styles.galleryCol}>
+            <div className={styles.tallImageWrap}>
               <Image
-                src={item.image}
-                alt={item.title}
-                width={600}
-                height={750}
-                className={styles.galleryImage}
+                src="/images/lookbook_fade.jpg"
+                alt="Modern Fade Haircut"
+                fill
+                className={styles.galleryImg}
               />
-              <div className={styles.cardOverlay}>
-                <span className={styles.tag}>
-                  {item.gender === "male" ? "Men's Cut" : "Women's Styling"}
-                </span>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <div className={styles.cardMeta}>
-                  <span>By {item.stylist}</span>
-                  <span>{item.timeTaken}</span>
-                </div>
+            </div>
+            <span className={styles.caption}>MODERN FADE</span>
+          </div>
+
+          {/* Column 2: Two Stacked Images */}
+          <div className={`${styles.galleryCol} ${styles.stackedCol}`}>
+            <div className={styles.stackedItem}>
+              <div className={styles.stackedImageWrap}>
+                <Image
+                  src="/images/lookbook_textured.jpg"
+                  alt="Textured Style"
+                  fill
+                  className={styles.galleryImg}
+                />
               </div>
-            </Link>
-          ))}
+              <span className={styles.caption}>TEXTURED STYLE</span>
+            </div>
+
+            <div className={styles.stackedItem}>
+              <div className={styles.stackedImageWrap}>
+                <Image
+                  src="/images/lookbook_beard.jpg"
+                  alt="Beard Grooming"
+                  fill
+                  className={styles.galleryImg}
+                />
+              </div>
+              <span className={styles.caption}>BEARD GROOMING</span>
+            </div>
+          </div>
+
+          {/* Column 3: Creative Cuts (Tall) */}
+          <div className={styles.galleryCol}>
+            <div className={styles.tallImageWrap}>
+              <Image
+                src="/images/lookbook_creative.jpg"
+                alt="Creative Cuts Razor Art"
+                fill
+                className={styles.galleryImg}
+              />
+            </div>
+            <span className={styles.caption}>CREATIVE CUTS</span>
+          </div>
+
+          {/* Column 4: Natural Texture (Tall) */}
+          <div className={styles.galleryCol}>
+            <div className={styles.tallImageWrap}>
+              <Image
+                src="/images/lookbook_curly.jpg"
+                alt="Natural Texture Hair"
+                fill
+                className={styles.galleryImg}
+              />
+            </div>
+            <span className={styles.caption}>NATURAL TEXTURE</span>
+          </div>
         </div>
       </div>
     </section>

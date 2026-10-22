@@ -21,7 +21,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: #a1a1aa;
   margin-bottom: 0.6rem;
   font-weight: 600;
   display: block;
@@ -50,7 +50,7 @@
 
 .packageCard {
   background: #14141a;
-  border: 1px solid rgba(200, 162, 101, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   padding: 3rem 2.5rem;
   display: flex;
@@ -61,7 +61,7 @@
 }
 
 .packageCard:hover {
-  border-color: var(--accent-gold);
+  border-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
@@ -70,9 +70,9 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: rgba(200, 162, 101, 0.15);
-  border: 1px solid rgba(200, 162, 101, 0.5);
-  color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -94,7 +94,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent-gold);
+  color: #a1a1aa;
   margin-bottom: 1rem;
   display: block;
 }
@@ -133,7 +133,7 @@
 }
 
 .checkIcon {
-  color: var(--accent-gold);
+  color: #ffffff;
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -156,7 +156,7 @@
   font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--accent-gold);
+  color: #ffffff;
   line-height: 1;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .bookPackageBtn {
-  background: #c8a265;
+  background: #ffffff;
   color: #0b0b0d;
   font-weight: 700;
   font-size: 0.85rem;
@@ -176,14 +176,14 @@
   padding: 0.85rem 1.6rem;
   border-radius: 2px;
   text-decoration: none;
-  border: 1px solid #c8a265;
+  border: 1px solid #ffffff;
   white-space: nowrap;
   transition: all 0.2s ease;
 }
 
 .bookPackageBtn:hover {
-  background: #dfc28e;
-  border-color: #dfc28e;
+  background: #e4e4e7;
+  border-color: #e4e4e7;
 }
 
 @media (max-width: 992px) {

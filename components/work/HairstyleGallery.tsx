@@ -31,9 +31,7 @@ export default function HairstyleGallery() {
           <span className={styles.subheading}>Atelier Showcase</span>
           <h1 className={styles.title}>The Hairstyle Gallery</h1>
           <p className={styles.description}>
-            A living catalog of precision fades, tailored beard profiles, sun-kissed
-            balayage, and restorative women&apos;s styling executed inside our chairs.
-            Click any style to inspect techniques.
+            Precision fades, beard profiles, and bespoke color. Click any style to inspect techniques.
           </p>
         </div>
 

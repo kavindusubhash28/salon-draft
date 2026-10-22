@@ -42,8 +42,7 @@ export default function ContactDetails() {
           <span className={styles.subheading}>Get in Touch</span>
           <h1 className={styles.title}>Contact The Atelier</h1>
           <p className={styles.description}>
-            We are situated in the heart of Colombo 03 on Galle Road. Whether you
-            have a question or wish to reserve your favorite craftsman, connect with us.
+            Situated on Galle Road, Colombo 03 opposite Liberty Arcade.
           </p>
         </div>
 

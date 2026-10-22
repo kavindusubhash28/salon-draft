@@ -19,8 +19,7 @@ export default function ServiceFAQ() {
           <span className={styles.subheading}>Frequently Addressed</span>
           <h2 className={styles.title}>Service &amp; Booking Questions</h2>
           <p className={styles.description}>
-            Have questions before your visit? Here is everything you need to know
-            regarding chairs, consultations, techniques, and studio etiquette.
+            Everything you need to know regarding bookings, walk-ins, and studio etiquette.
           </p>
         </div>
 

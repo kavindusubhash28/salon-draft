@@ -19,7 +19,7 @@
 }
 
 .mapFrameWrap {
-  border: 1px solid var(--accent-gold);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   overflow: hidden;
   height: 440px;
@@ -40,8 +40,8 @@
   bottom: 1rem;
   left: 1rem;
   background: rgba(11, 11, 13, 0.9);
-  border: 1px solid var(--accent-gold);
-  color: var(--accent-gold);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -59,7 +59,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: #a1a1aa;
   margin-bottom: 0.6rem;
   font-weight: 600;
   display: block;
@@ -96,7 +96,7 @@
 }
 
 .landmarkIcon {
-  color: var(--accent-gold);
+  color: #ffffff;
   margin-top: 3px;
   flex-shrink: 0;
 }
@@ -118,7 +118,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #c8a265;
+  background: #ffffff;
   color: #0b0b0d;
   font-weight: 700;
   font-size: 0.85rem;
@@ -127,11 +127,14 @@
   padding: 0.85rem 1.6rem;
   border-radius: 2px;
   text-decoration: none;
+  border: 1px solid #ffffff;
   width: fit-content;
+  transition: all 0.2s ease;
 }
 
 .getDirectionsBtn:hover {
-  background: #dfc28e;
+  background: #e4e4e7;
+  border-color: #e4e4e7;
 }
 
 @media (max-width: 992px) {

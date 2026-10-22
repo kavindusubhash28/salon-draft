@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import "./globals.css";
 
-const cinzel = Cinzel({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -45,9 +46,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${plusJakartaSans.variable} scroll-smooth`}
+      className={`${playfair.variable} ${plusJakartaSans.variable} scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col bg-[#0b0b0d] text-[#f8f8f7] antialiased selection:bg-[#c8a265] selection:text-[#0b0b0d]">
+      <body className="min-h-screen flex flex-col bg-[#0a0a0c] text-[#ffffff] antialiased selection:bg-white selection:text-black">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

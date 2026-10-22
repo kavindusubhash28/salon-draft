@@ -168,8 +168,7 @@ ${notes ? `*Notes:* ${notes}%0A` : ""}`;
           <span className={styles.subheading}>Online Chair Booking</span>
           <h1 className={styles.title}>Reserve Your Private Chair</h1>
           <p className={styles.description}>
-            Select your dedicated studio (separate gentlemen and ladies areas),
-            choose your preferred master brother, and select your ideal date and time.
+            Dedicated male and female studios. Fast slot reservation with WhatsApp confirmation.
           </p>
         </div>
 
@@ -285,7 +284,7 @@ ${notes ? `*Notes:* ${notes}%0A` : ""}`;
                   readOnly
                   className={styles.input}
                   value={timeSlot}
-                  style={{ background: "#1f1f2a", color: "#c8a265", fontWeight: 700 }}
+                  style={{ background: "#18181b", color: "#ffffff", fontWeight: 600 }}
                 />
               </div>
             </div>

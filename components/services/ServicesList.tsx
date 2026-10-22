@@ -32,8 +32,7 @@ export default function ServicesList() {
           <span className={styles.subheading}>Bespoke Hair &amp; Grooming</span>
           <h1 className={styles.title}>Services &amp; Pricing Menu</h1>
           <p className={styles.description}>
-            We provide specialized, private salon studios for men and women. Select
-            your studio below to explore tailored treatments, precise tariffs, and durations.
+            Dedicated private studios for gentlemen and ladies. Select your studio below.
           </p>
         </div>
 

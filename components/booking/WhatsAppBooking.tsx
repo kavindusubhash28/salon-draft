@@ -15,9 +15,7 @@ export default function WhatsAppBooking() {
             </div>
             <h2 className={styles.title}>Prefer Direct WhatsApp Messaging?</h2>
             <p className={styles.desc}>
-              Skip the form completely. Message our front desk directly with your
-              desired haircut photo, wedding schedule, or preferred day. We reply in real-time
-              during operating hours.
+              Skip the form. Message our front desk directly with your haircut photo or preferred day for instant confirmation.
             </p>
           </div>
 

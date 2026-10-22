@@ -1,217 +1,195 @@
 .footer {
-  background: #070709;
-  border-top: 1px solid rgba(200, 162, 101, 0.25);
-  padding: 4.5rem 0 2rem;
-  color: #a9a8a3;
-  position: relative;
+  background-color: #12100e;
+  color: #f7f4ee;
+  padding: 5rem 2rem 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footerContainer {
+.container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
-.footerGrid {
+.mainGrid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
-.brandCol {
+@media (min-width: 640px) {
+  .mainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1fr 1.3fr 1.2fr;
+    gap: 3.5rem;
+  }
+}
+
+/* Column 1: Logo */
+.logoCol {
   display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  align-items: flex-start;
 }
 
-.brandHeader {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footerLogo {
-  width: 60px;
-  height: 60px;
+.logoWrap {
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
-  border: 2px solid var(--accent-gold);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.brandName {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.brandMotto {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-}
-
-.brandBio {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: #8c8b86;
-  max-width: 380px;
-}
-
-.socialRow {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.socialIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 2px;
-  background: #141418;
-  border: 1px solid rgba(200, 162, 101, 0.3);
-  color: var(--accent-gold);
-  text-decoration: none;
-  transition: all 0.25s;
-}
-
-.socialIcon:hover {
-  background: var(--accent-gold);
-  color: #0b0b0d;
-  transform: translateY(-2px);
-}
-
+/* Titles */
 .colTitle {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
   color: #ffffff;
-  margin-bottom: 1.25rem;
-  position: relative;
-  padding-bottom: 0.5rem;
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.02em;
 }
 
-.colTitle::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 28px;
-  height: 2px;
-  background: var(--accent-gold);
-}
-
+/* Column 2: Explore */
 .linkList {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.linkItem a {
-  color: #9c9b96;
+.linkItem {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #a89f95;
   text-decoration: none;
-  font-size: 0.88rem;
-  transition: color 0.2s, transform 0.2s;
+  transition: color 0.2s ease, transform 0.2s ease;
   display: inline-block;
 }
 
-.linkItem a:hover {
-  color: var(--accent-gold);
-  transform: translateX(4px);
+.linkItem:hover {
+  color: #ffffff;
+  transform: translateX(2px);
 }
 
-.infoList {
+/* Column 3: Get In Touch */
+.contactList {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.15rem;
 }
 
-.infoItem {
+.contactItem {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  font-size: 0.88rem;
-  color: #9c9b96;
+  font-family: var(--font-sans);
 }
 
-.infoIcon {
-  color: var(--accent-gold);
-  margin-top: 2px;
+.contactIcon {
+  color: #c5925a;
+  margin-top: 0.2rem;
   flex-shrink: 0;
 }
 
-.hoursBlock {
-  background: #101014;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1rem;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-
-.hoursTitle {
-  font-size: 0.8rem;
-  color: var(--accent-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.hoursText {
-  font-size: 0.82rem;
-  color: #d1cfc7;
-  line-height: 1.5;
-}
-
-.bottomBar {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 1.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-  color: #6a6965;
-}
-
-.bottomLinks {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.bottomLinks a {
-  color: #6a6965;
+.contactPrimary {
+  display: block;
+  font-size: 0.85rem;
+  color: #f7f4ee;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.bottomLinks a:hover {
-  color: var(--accent-gold);
+.contactPrimary:hover {
+  color: #c5925a;
 }
 
-@media (max-width: 992px) {
-  .footerGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-  }
+.contactSecondary {
+  display: block;
+  font-size: 0.78rem;
+  color: #7d756d;
+  margin-top: 0.15rem;
 }
 
-@media (max-width: 640px) {
-  .footerGrid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+/* Column 4: Follow Us */
+.facebookLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #f7f4ee;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.45rem 0.9rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+.facebookLink:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.fbIcon {
+  color: #ffffff;
+}
+
+.followText {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #8f867c;
+  margin: 0;
+  max-width: 260px;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
   .bottomBar {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
+}
+
+.copyright {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: #70685f;
+  margin: 0;
+}
+
+.motto {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: #70685f;
+  margin: 0;
 }

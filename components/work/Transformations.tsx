@@ -11,8 +11,7 @@ export default function Transformations() {
           <span className={styles.subheading}>Before &amp; After</span>
           <h2 className={styles.title}>Real Hair Transformations</h2>
           <p className={styles.description}>
-            Witness the restorative power of master geometry and chemical correction.
-            Real clients, raw hair conditions restored to radiant perfection.
+            Raw hair conditions restored with precision geometry and restorative care.
           </p>
         </div>
 

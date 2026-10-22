@@ -1,153 +1,133 @@
 .section {
-  padding: 6.5rem 0;
-  background: #09090b;
-  position: relative;
-  border-bottom: 1px solid rgba(200, 162, 101, 0.2);
+  background-color: #211814;
+  color: #f7f4ee;
+  padding: 6rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
-.mainGrid {
+.experienceGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4.5rem;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
   align-items: center;
 }
 
-.imageSide {
-  position: relative;
+@media (min-width: 900px) {
+  .experienceGrid {
+    grid-template-columns: 0.95fr 1.2fr;
+    gap: 4.5rem;
+  }
 }
 
-.mainImageWrap {
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-  border: 1px solid rgba(200, 162, 101, 0.35);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-}
-
-.mainImage {
+/* Left Image Column */
+.imageCol {
   width: 100%;
-  height: 520px;
+}
+
+.chairImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.chairImg {
   object-fit: cover;
-  display: block;
+  object-position: center 30%;
 }
 
-.floatingBadge {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  background: #14141a;
-  border: 1px solid var(--accent-gold);
-  padding: 1.5rem;
-  border-radius: 4px;
-  max-width: 240px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-}
-
-.floatingBadgeNumber {
-  font-family: var(--font-serif);
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--accent-gold);
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-
-.floatingBadgeLabel {
-  font-size: 0.82rem;
-  color: #d1cfc7;
-  line-height: 1.4;
-}
-
-.textSide {
+/* Right Content Column */
+.contentCol {
   display: flex;
   flex-direction: column;
 }
 
-.subheading {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-  margin-bottom: 0.6rem;
+.overline {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
   font-weight: 600;
-  display: block;
+  letter-spacing: 0.2em;
+  color: #c5925a;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 1.25rem;
+  font-size: 2.6rem;
   line-height: 1.15;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
 }
 
-.leadText {
-  font-size: 1.05rem;
-  color: #c5c3bc;
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.4rem;
+  }
 }
 
-.featureList {
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #b5ada4;
+  margin: 0 0 3rem;
+  max-width: 520px;
+}
+
+/* 3 Pillars Grid */
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+.pillarItem {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
 }
 
-.featureItem {
-  display: flex;
-  gap: 1.25rem;
+.pillarNum {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c5925a;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
 }
 
-.featureNumber {
+.pillarTitle {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--accent-gold);
-  width: 36px;
-  height: 36px;
-  border: 1px solid rgba(200, 162, 101, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  flex-shrink: 0;
-  background: #111116;
-}
-
-.featureContent h4 {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 0.35rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
 }
 
-.featureContent p {
-  font-size: 0.88rem;
-  color: #8c8a82;
-  line-height: 1.6;
-}
-
-@media (max-width: 992px) {
-  .mainGrid {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-  .floatingBadge {
-    position: static;
-    margin-top: 1rem;
-    max-width: 100%;
-  }
-  .mainImage {
-    height: 380px;
-  }
+.pillarDesc {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #9c9288;
+  margin: 0;
 }

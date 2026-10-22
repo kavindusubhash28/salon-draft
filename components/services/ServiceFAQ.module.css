@@ -19,7 +19,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: #a1a1aa;
   margin-bottom: 0.6rem;
   font-weight: 600;
   display: block;
@@ -55,7 +55,7 @@
 }
 
 .faqItemOpen {
-  border-color: rgba(200, 162, 101, 0.4);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .questionBtn {
@@ -76,7 +76,7 @@
 }
 
 .iconWrap {
-  color: var(--accent-gold);
+  color: #ffffff;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -97,7 +97,7 @@
 .helpBox {
   margin-top: 3.5rem;
   background: #141419;
-  border: 1px solid rgba(200, 162, 101, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem;
   border-radius: 4px;
   text-align: center;

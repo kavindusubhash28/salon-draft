@@ -11,11 +11,7 @@ export default function TeamProfiles() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subheading}>The Craftsmen</span>
-          <h2 className={styles.title}>Meet The Three Brothers</h2>
-          <p className={styles.description}>
-            Three complementary masteries, one unified dedication to excellence.
-            Reserve your session with your preferred craftsman.
-          </p>
+          <h2 className={styles.title}>The Three Brothers</h2>
         </div>
 
         <div className={styles.teamGrid}>
@@ -38,12 +34,11 @@ export default function TeamProfiles() {
                   <div className={styles.memberRole}>{member.role}</div>
 
                   <div className={styles.specialtyBox}>
-                    <span className={styles.specialtyLabel}>Discipline &amp; Mastery</span>
+                    <span className={styles.specialtyLabel}>Specialty</span>
                     <span className={styles.specialtyText}>{member.specialty}</span>
                   </div>
 
                   <p className={styles.memberBio}>{member.bio}</p>
-                  <p className={styles.memberQuote}>&ldquo;{member.quote}&rdquo;</p>
                 </div>
 
                 <Link
@@ -51,7 +46,7 @@ export default function TeamProfiles() {
                   className={styles.bookBtn}
                 >
                   <Calendar size={14} />
-                  <span>Request {member.name.split(" ")[0]}&apos;s Chair</span>
+                  <span>Book {member.name.split(" ")[0]}&apos;s Chair</span>
                 </Link>
               </div>
             </div>

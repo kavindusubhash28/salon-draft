@@ -6,20 +6,20 @@ export default function SalonInterior() {
   const spaces = [
     {
       tag: "Zone A &bull; Barbershop Lounge",
-      title: "The Heritage Gentleman's Studio",
-      desc: "Reclining vintage barber chairs, dark walnut counters, antique brass mirrors, and warm 2700K lighting designed for the ultimate close razor shave.",
+      title: "The Heritage Men's Studio",
+      desc: "Reclining vintage barber chairs, walnut counters, and warm lighting for close razor shaves.",
       image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
     },
     {
       tag: "Zone B &bull; Hair & Color Lab",
-      title: "The Tranquil Ladies Atelier",
-      desc: "An acoustic-insulated light-filled studio with state-of-the-art Italian hair wash basins, specialized color mixing bar, and ergonomic styling stations.",
+      title: "The Tranquil Ladies' Studio",
+      desc: "Private acoustic studio with ergonomic wash basins and low-ammonia color bar.",
       image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
     },
     {
       tag: "Zone C &bull; Guest Hospitality",
-      title: "The Espresso & Consultation Bar",
-      desc: "Relax before or after your appointment with complimentary dark roast Italian espresso, craft botanical sodas, and curated international menswear and fashion periodicals.",
+      title: "Espresso & Lounge Bar",
+      desc: "Fresh dark roast Italian espresso, craft sodas, and curated periodicals before your session.",
       image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
     },
   ];
@@ -29,11 +29,7 @@ export default function SalonInterior() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subheading}>The Physical Space</span>
-          <h2 className={styles.title}>Designed for Uncompromised Sanctuary</h2>
-          <p className={styles.description}>
-            Step inside 48 Galle Road, Colombo 03. Every corner has been custom
-            curated to create tranquility, masculine heritage, and refined aesthetic luxury.
-          </p>
+          <h2 className={styles.title}>Atelier Sanctuary</h2>
         </div>
 
         <div className={styles.galleryGrid}>
@@ -63,19 +59,19 @@ export default function SalonInterior() {
         <div className={styles.featuresStrip}>
           <div className={styles.featureBox}>
             <h5>Hospital-Grade Hygiene</h5>
-            <p>UV sterilizer autoclaves for every single blade and shear.</p>
+            <p>UV sterilizers for every single blade and shear.</p>
           </div>
           <div className={styles.featureBox}>
             <h5>Private Zones</h5>
-            <p>Discrete consultation and styling areas for complete client comfort.</p>
+            <p>Dedicated separate studios for men and women.</p>
           </div>
           <div className={styles.featureBox}>
-            <h5>Climate &amp; Acoustics</h5>
-            <p>Filtered clean air circulation and soothing low ambient jazz.</p>
+            <h5>Filtered Acoustics</h5>
+            <p>Clean air filtration and low ambient background jazz.</p>
           </div>
           <div className={styles.featureBox}>
-            <h5>Free Reserved Parking</h5>
-            <p>Dedicated secure front parking on Galle Road for guests.</p>
+            <h5>Front Parking</h5>
+            <p>Dedicated guest parking right on Galle Road.</p>
           </div>
         </div>
       </div>

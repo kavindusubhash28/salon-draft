@@ -12,8 +12,7 @@ export default function ServicePackages() {
           <span className={styles.subheading}>Curated Combinations</span>
           <h2 className={styles.title}>All-Inclusive Atelier Packages</h2>
           <p className={styles.description}>
-            Save time and experience our most comprehensive ritual transformations.
-            Crafted for full grooming overhauls, bridal preparations, and VIP events.
+            Comprehensive ritual combinations for grooming overhauls and weddings.
           </p>
         </div>
 

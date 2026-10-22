@@ -3,69 +3,55 @@ import Image from "next/image";
 import styles from "./BrandExperience.module.css";
 
 export default function BrandExperience() {
-  const experiences = [
+  const pillars = [
     {
-      num: "01",
-      title: "Direct Master Barber Oversight",
-      desc: "Unlike commercial chain salons where apprentices practice unchecked, every client at Three Brothers is either directly styled or guided by one of the three founders.",
+      num: "01 /",
+      title: "Personal attention",
+      desc: "We take time to understand your style and preferences.",
     },
     {
-      num: "02",
-      title: "Dual Purpose Private Sanctuaries",
-      desc: "We engineered two distinct atmospheres: an oak-and-leather heritage gentleman's lounge for razor work and fades, and a serene, sunlit studio for ladies' couture cuts and color.",
+      num: "02 /",
+      title: "Skilled hands",
+      desc: "Experienced barbers who care about the craft.",
     },
     {
-      num: "03",
-      title: "Japanese Steel & Italian Low-Ammonia Chemistry",
-      desc: "We refuse to cut corners on tools. We cut with handcrafted cobalt steel shears and use organic European treatments that fortify your hair fibers rather than strip them.",
-    },
-    {
-      num: "04",
-      title: "The Complimentary Atelier Ritual",
-      desc: "From dark roast Italian espresso upon arrival to steamed eucalyptus hot towels and neck tension release, every visit is treated as a restorative luxury pause.",
+      num: "03 /",
+      title: "Relaxed atmosphere",
+      desc: "A comfortable space made for you to unwind.",
     },
   ];
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.mainGrid}>
-          {/* Visual Showcase */}
-          <div className={styles.imageSide}>
-            <div className={styles.mainImageWrap}>
+        <div className={styles.experienceGrid}>
+          {/* Left Column: Authentic Barber Chair Photo */}
+          <div className={styles.imageCol}>
+            <div className={styles.chairImageWrap}>
               <Image
-                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=900&auto=format&fit=crop"
-                alt="Three Brothers Barber Craftsmanship"
-                width={700}
-                height={600}
-                className={styles.mainImage}
+                src="/images/experience_chair.jpg"
+                alt="Three Brothers Vintage Heritage Barber Chair"
+                fill
+                className={styles.chairImg}
               />
-            </div>
-            <div className={styles.floatingBadge}>
-              <div className={styles.floatingBadgeNumber}>100%</div>
-              <div className={styles.floatingBadgeLabel}>
-                Uncompromising attention to personal hair geometry and razor discipline.
-              </div>
             </div>
           </div>
 
-          {/* Experience Narrative */}
-          <div className={styles.textSide}>
-            <span className={styles.subheading}>The Atelier Standard</span>
-            <h2 className={styles.title}>Why Discerning Clients Choose Three Brothers</h2>
-            <p className={styles.leadText}>
-              In an era of mass-produced, rushed 15-minute chops, we stand firm on traditional
-              craftsmanship, unhurried precision, and the relationship between client and craftsman.
+          {/* Right Column: Experience Narrative & 3 Pillars */}
+          <div className={styles.contentCol}>
+            <span className={styles.overline}>OUR EXPERIENCE</span>
+            <h2 className={styles.title}>More than a haircut.</h2>
+            <p className={styles.subtitle}>
+              A thoughtful experience built around your style, your comfort, and
+              the details that matter.
             </p>
 
-            <div className={styles.featureList}>
-              {experiences.map((exp) => (
-                <div key={exp.num} className={styles.featureItem}>
-                  <div className={styles.featureNumber}>{exp.num}</div>
-                  <div className={styles.featureContent}>
-                    <h4>{exp.title}</h4>
-                    <p>{exp.desc}</p>
-                  </div>
+            <div className={styles.pillarsGrid}>
+              {pillars.map((item, index) => (
+                <div key={index} className={styles.pillarItem}>
+                  <span className={styles.pillarNum}>{item.num}</span>
+                  <h3 className={styles.pillarTitle}>{item.title}</h3>
+                  <p className={styles.pillarDesc}>{item.desc}</p>
                 </div>
               ))}
             </div>

@@ -1,61 +1,59 @@
 import React from "react";
 import Link from "next/link";
-import { Scissors, Calendar, Sparkles, ChevronRight, Award } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
-      <div className={styles.heroOverlay} />
+      {/* Background Hero Image */}
+      <div className={styles.imageContainer}>
+        <Image
+          src="/images/hero_barber.jpg"
+          alt="Three Brothers Master Barber Craftsman"
+          fill
+          priority
+          className={styles.heroImage}
+        />
+        <div className={styles.heroOverlay} />
+      </div>
+
+      {/* Hero Content */}
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <div className={styles.badgePill}>
-            <Award size={15} />
-            <span>Artisan Master Barbers &bull; Unisex Studio &bull; Colombo 03</span>
-          </div>
+          <span className={styles.overline}>THREE BROTHERS SALON CUTS</span>
 
           <h1 className={styles.heroTitle}>
-            Heritage Craft.
-            <span className={styles.heroTitleGold}>Modern Precision.</span>
-            Uncompromised.
+            GOOD HAIR.
+            <br />
+            GOOD CONFIDENCE.
           </h1>
 
-          <p className={styles.heroDesc}>
-            Founded by three brothers united by an obsession with razor discipline,
-            custom shear architecture, and vibrant color chemistry. Step into our
-            dual-studio atelier where every cut is treated as bespoke craftsmanship.
+          <p className={styles.tagline}>
+            BARBERING &nbsp;—&nbsp; STYLING &nbsp;—&nbsp; GROOMING
           </p>
 
           <div className={styles.ctaGroup}>
-            <Link href="/booking" className={styles.primaryBtn}>
-              <Calendar size={17} />
-              <span>Reserve Your Chair</span>
+            <Link href="/services" className={styles.primaryBtn}>
+              <span>EXPLORE OUR SERVICES</span>
+              <ArrowRight size={15} />
             </Link>
-            <Link href="/services" className={styles.secondaryBtn}>
-              <Scissors size={17} />
-              <span>Explore Menu &amp; Rates</span>
-              <ChevronRight size={16} />
+            <Link href="/work" className={styles.secondaryBtn}>
+              <span>VIEW OUR WORK</span>
             </Link>
           </div>
+        </div>
+      </div>
 
-          <div className={styles.statsRow}>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>3</span>
-              <span className={styles.statLabel}>Master Brothers</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>14+</span>
-              <span className={styles.statLabel}>Years Heritage</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>18K+</span>
-              <span className={styles.statLabel}>Precision Cuts</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>4.9/5</span>
-              <span className={styles.statLabel}>Client Rating</span>
-            </div>
-          </div>
+      {/* Bottom Ticker Strip */}
+      <div className={styles.tickerStrip}>
+        <div className={styles.tickerContent}>
+          <span>CUTS WITH CHARACTER</span>
+          <span className={styles.tickerDot}>▪</span>
+          <span>DETAIL IN EVERY FINISH</span>
+          <span className={styles.tickerDot}>▪</span>
+          <span>MADE FOR YOUR STYLE</span>
         </div>
       </div>
     </section>
