@@ -1,19 +1,25 @@
 .heroSection {
   position: relative;
-  min-height: 88vh;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #12100e;
   overflow: hidden;
-  padding-top: 7rem;
+  padding-top: 6.5rem;
   user-select: none;
 }
 
 @media (min-width: 768px) {
   .heroSection {
-    min-height: 94vh;
-    padding-top: 9rem;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: 8rem;
   }
 }
 
@@ -86,7 +92,7 @@
 }
 
 .heroContent {
-  max-width: 640px;
+  max-width: 760px;
 }
 
 .overline {
@@ -102,8 +108,8 @@
 
 .heroTitle {
   font-family: var(--font-serif, "Playfair Display", serif);
-  font-size: 2.8rem;
-  line-height: 1.1;
+  font-size: clamp(2.1rem, 6.5vw, 2.75rem);
+  line-height: 1.12;
   font-weight: 700;
   color: #f7f4ee;
   letter-spacing: 0.02em;
@@ -111,15 +117,23 @@
   text-transform: uppercase;
 }
 
+.heroTitleAccent {
+  color: #c5925a;
+  background: linear-gradient(135deg, #e5b37e 0%, #c5925a 50%, #e5b37e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 @media (min-width: 640px) {
   .heroTitle {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
 }
 
 @media (min-width: 1024px) {
   .heroTitle {
-    font-size: 4.4rem;
+    font-size: 4.1rem;
   }
 }
 

@@ -18,17 +18,17 @@ export default function LocationMap() {
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className={styles.mapNotice}>
-              48 Galle Road &bull; Colombo 03
+              304 High Level Road &bull; Gamsaba Junction, Nugegoda 10250
             </div>
           </div>
 
           {/* Directions & Parking Details */}
           <div className={styles.directionsContent}>
             <span className={styles.subheading}>Find Your Way</span>
-            <h2 className={styles.title}>Atelier Coordinates &amp; Parking</h2>
+            <h2 className={styles.title}>Salon Location &amp; Parking</h2>
             <p className={styles.lead}>
-              Located centrally on Galle Road, Colombo 03, right opposite Liberty
-              Arcade with swift access from Kollupitiya and Bambalapitiya.
+              Located prominently on High Level Road at Gamsaba Junction, Nugegoda
+              with convenient access from all Colombo suburbs.
             </p>
 
             <div className={styles.landmarkList}>
@@ -36,7 +36,7 @@ export default function LocationMap() {
                 <MapPin size={18} className={styles.landmarkIcon} />
                 <div>
                   <strong>Key Landmarks</strong>
-                  <span>Directly opposite Liberty Arcade; 200m south of Kollupitiya Junction.</span>
+                  <span>Gamsaba Junction, High Level Road, Nugegoda 10250.</span>
                 </div>
               </div>
 
@@ -44,7 +44,7 @@ export default function LocationMap() {
                 <Car size={18} className={styles.landmarkIcon} />
                 <div>
                   <strong>Guest Parking</strong>
-                  <span>Dedicated, secure front bay parking reserved exclusively for Three Brothers clients.</span>
+                  <span>Dedicated, secure front bay parking reserved for Three Brothers clients.</span>
                 </div>
               </div>
 
@@ -52,13 +52,13 @@ export default function LocationMap() {
                 <Bus size={18} className={styles.landmarkIcon} />
                 <div>
                   <strong>Public Transit</strong>
-                  <span>Kollupitiya Supermarket Bus Halt is within a 2-minute walking distance.</span>
+                  <span>Gamsaba Junction Bus Stop and Nugegoda Railway Station nearby.</span>
                 </div>
               </div>
             </div>
 
             <a
-              href="https://maps.google.com/?q=Galle+Road+Colombo+03"
+              href="https://maps.google.com/?q=304+High+Level+Road+Gamsaba+Junction+Nugegoda+10250+Sri+Lanka"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.getDirectionsBtn}

@@ -25,7 +25,7 @@ export default function ContactCTA() {
               <span>Book Appointment</span>
             </Link>
 
-            <a href="tel:+94771234567" className={styles.callBtn}>
+            <a href="tel:+94117210081" className={styles.callBtn}>
               <Phone size={18} />
               <span>Call Now</span>
             </a>

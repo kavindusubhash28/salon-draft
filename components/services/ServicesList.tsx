@@ -13,44 +13,44 @@ import styles from "./ServicesList.module.css";
 export default function ServicesList() {
   const serviceCards = [
     {
-      id: "haircuts",
-      title: "Haircuts & Styling",
-      desc: "Classic cuts, modern fades, trims, and styling tailored to each client.",
+      id: "hair-care-styling",
+      title: "Hair Care & Styling",
+      desc: "Gents haircuts, classic and modern fades, ladies haircuts, layer cuts, hair coloring, highlights, and hair setting.",
       image: "/images/service_haircut.jpg",
       icon: <Scissors size={18} strokeWidth={1.8} />,
     },
     {
-      id: "shave",
-      title: "Beard & Shaving",
-      desc: "Beard trims, line-ups, hot towel shaves, and detailed grooming.",
-      image: "/images/service_shave.jpg",
-      icon: <Sparkles size={18} strokeWidth={1.8} />,
-    },
-    {
-      id: "colour",
-      title: "Hair Colour",
-      desc: "Colouring, toning, grey blending, and refresh services.",
-      image: "/images/service_colour.jpg",
-      icon: <Paintbrush size={18} strokeWidth={1.8} />,
-    },
-    {
-      id: "scalp",
-      title: "Hair & Scalp Care",
-      desc: "Scalp treatments, washes, conditioning, and hair nourishment.",
-      image: "/images/service_scalp.jpg",
+      id: "treatments",
+      title: "Treatments",
+      desc: "Hair conditioning, restorative keratin treatments, and nourishing oil treatments for healthy hair.",
+      image: "/images/Services/treatments.jpg",
       icon: <Droplet size={18} strokeWidth={1.8} />,
     },
     {
-      id: "kids",
-      title: "Kids & Teens Cuts",
-      desc: "Stylish, age-appropriate cuts for younger clients.",
-      image: "/images/service_kids.jpg",
-      icon: <User size={18} strokeWidth={1.8} />,
+      id: "grooming-beard",
+      title: "Grooming & Beard",
+      desc: "Precision beard styling, sharp grooming, and traditional hot towel straight razor shaves.",
+      image: "/images/Services/beard.jpg",
+      icon: <Sparkles size={18} strokeWidth={1.8} />,
     },
     {
-      id: "occasion",
-      title: "Special Occasion Grooming",
-      desc: "Polished looks for weddings, events, and photoshoots.",
+      id: "face-skin-care",
+      title: "Face & Skin Care",
+      desc: "Hydrafacials, carbon laser peels, radiant gold facials, and meticulous eyebrow threading.",
+      image: "/images/Services/facieal.jpg",
+      icon: <Sparkles size={18} strokeWidth={1.8} />,
+    },
+    {
+      id: "nails",
+      title: "Nails",
+      desc: "Classic manicures, long-lasting gel pedicures, and rejuvenating jelly pedicures.",
+      image: "/images/Services/nails.jpg",
+      icon: <Sparkles size={18} strokeWidth={1.8} />,
+    },
+    {
+      id: "beauty-dressing",
+      title: "Beauty & Dressing",
+      desc: "Professional makeup artistry and exquisite event dressing for weddings and special occasions.",
       image: "/images/service_occasion.jpg",
       icon: <Crown size={18} strokeWidth={1.8} />,
     },
@@ -70,9 +70,8 @@ export default function ServicesList() {
           <h2 className={styles.title}>What We Offer</h2>
 
           <p className={styles.description}>
-            A complete range of grooming services for modern gentlemen. Quality
-            care, expert techniques and a premium salon experience — tailored to
-            your unique style.
+            A complete suite of premium grooming, hair artistry, skin therapy,
+            and beauty dressing tailored to bring out your best confidence.
           </p>
         </div>
 

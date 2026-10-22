@@ -95,12 +95,12 @@ export default function Hero() {
       {/* Hero Content */}
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <span className={styles.overline}>THREE BROTHERS SALON CUTS</span>
+          <span className={styles.overline}>GOOD HAIR. GOOD CONFIDENCE.</span>
 
           <h1 className={styles.heroTitle}>
-            GOOD HAIR.
+            THREE BROTHERS
             <br />
-            GOOD CONFIDENCE.
+            <span className={styles.heroTitleAccent}>SALON CUTS</span>
           </h1>
 
           <p className={styles.tagline}>

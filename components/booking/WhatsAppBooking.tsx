@@ -32,7 +32,7 @@ export default function WhatsAppBooking() {
               <MessageSquare size={20} />
               <span>Message {SALON_INFO.whatsapp}</span>
             </a>
-            <span className={styles.phoneHint}>Available 9:00 AM – 8:30 PM Daily</span>
+            <span className={styles.phoneHint}>Available 8:00 AM – 10:00 PM Daily</span>
           </div>
         </div>
       </div>

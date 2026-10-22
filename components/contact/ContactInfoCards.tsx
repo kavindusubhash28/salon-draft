@@ -8,34 +8,34 @@ const CONTACT_CHANNELS = [
   {
     title: "Call Us",
     icon: Phone,
-    description: "Speak to our team for appointments, services or general enquiries.",
-    value: "+94 77 123 4567",
-    href: "tel:+94771234567",
+    description: "Speak to our front desk for immediate inquiries and bookings.",
+    value: "+94 117 210 081 / +94 78 972 7272",
+    href: "tel:+94117210081",
   },
   {
     title: "WhatsApp",
     icon: MessageCircle,
-    description: "Quick responses for bookings and questions.",
-    value: "+94 77 123 4567",
-    href: "https://wa.me/94771234567",
+    description: "Instant response for appointments, price quotes and queries.",
+    value: "+94 78 972 7272",
+    href: "https://wa.me/94789727272",
   },
   {
     title: "Email Us",
     icon: Mail,
-    description: "Drop us a message anytime. We'll get back to you soon.",
+    description: "Drop us a message for group bookings or special requests.",
     value: "info@threebrothers.lk",
     href: "mailto:info@threebrothers.lk",
   },
 ];
 
 const OPENING_HOURS = [
-  { day: "Monday", hours: "10:00 AM – 8:00 PM" },
-  { day: "Tuesday", hours: "10:00 AM – 8:00 PM" },
-  { day: "Wednesday", hours: "10:00 AM – 8:00 PM" },
-  { day: "Thursday", hours: "10:00 AM – 8:00 PM" },
-  { day: "Friday", hours: "10:00 AM – 9:00 PM" },
-  { day: "Saturday", hours: "9:00 AM – 9:00 PM" },
-  { day: "Sunday", hours: "9:00 AM – 6:00 PM" },
+  { day: "Monday", hours: "8:00 AM – 10:00 PM" },
+  { day: "Tuesday", hours: "8:00 AM – 10:00 PM" },
+  { day: "Wednesday", hours: "8:00 AM – 10:00 PM" },
+  { day: "Thursday", hours: "8:00 AM – 10:00 PM" },
+  { day: "Friday", hours: "8:00 AM – 10:00 PM" },
+  { day: "Saturday", hours: "8:00 AM – 10:00 PM" },
+  { day: "Sunday", hours: "8:00 AM – 10:00 PM" },
 ];
 
 export default function ContactInfoCards() {

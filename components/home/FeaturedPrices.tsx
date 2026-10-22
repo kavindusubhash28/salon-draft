@@ -6,10 +6,12 @@ import styles from "./FeaturedPrices.module.css";
 
 export default function FeaturedPrices() {
   const priceItems = [
-    { name: "Classic Haircut", price: "LKR —" },
-    { name: "Haircut & Beard", price: "LKR —" },
-    { name: "Beard Grooming", price: "LKR —" },
-    { name: "Hair Styling", price: "LKR —" },
+    { name: "Gents Classic Haircut & Fade", price: "LKR 1,800+" },
+    { name: "Ladies Haircut & Layer Cut", price: "LKR 3,500+" },
+    { name: "Beard Styling & Hot Towel Shave", price: "LKR 1,200+" },
+    { name: "Keratin & Deep Conditioning", price: "LKR 5,500+" },
+    { name: "Hydrafacial & Carbon Peel", price: "LKR 5,500+" },
+    { name: "Manicure & Jelly Pedicure", price: "LKR 2,200+" },
   ];
 
   return (

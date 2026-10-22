@@ -46,7 +46,7 @@ export default function ServicesCTA() {
               </Link>
 
               <a
-                href="https://wa.me/94771234567?text=Hello%20Three%20Brothers%20Salon!%20I%20would%20like%20to%20book%20an%20appointment."
+                href="https://wa.me/94789727272?text=Hello%20Three%20Brothers%20Salon!%20I%20would%20like%20to%20book%20an%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.whatsappBtn}
@@ -66,8 +66,8 @@ export default function ServicesCTA() {
                 </div>
                 <div className={styles.infoText}>
                   <h4 className={styles.infoHeading}>Our Location</h4>
-                  <p className={styles.infoLine1}>Colombo, Sri Lanka</p>
-                  <p className={styles.infoLine2}>(Exact address on contact)</p>
+                  <p className={styles.infoLine1}>304 High Level Road, Gamsaba Junction</p>
+                  <p className={styles.infoLine2}>Nugegoda 10250, Sri Lanka</p>
                 </div>
               </div>
 
@@ -77,7 +77,7 @@ export default function ServicesCTA() {
                 </div>
                 <div className={styles.infoText}>
                   <h4 className={styles.infoHeading}>Opening Hours</h4>
-                  <p className={styles.infoLine1}>Mon — Sun : 9:00 AM — 8:00 PM</p>
+                  <p className={styles.infoLine1}>Mon — Sun : 8:00 AM — 10:00 PM</p>
                 </div>
               </div>
 
@@ -87,8 +87,8 @@ export default function ServicesCTA() {
                 </div>
                 <div className={styles.infoText}>
                   <h4 className={styles.infoHeading}>Contact Us</h4>
-                  <p className={styles.infoLine1}>+94 77 123 4567</p>
-                  <p className={styles.infoLine2}>WhatsApp available</p>
+                  <p className={styles.infoLine1}>+94 117 210 081 / +94 78 972 7272</p>
+                  <p className={styles.infoLine2}>WhatsApp: +94 78 972 7272</p>
                 </div>
               </div>
             </div>

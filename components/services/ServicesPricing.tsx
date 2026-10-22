@@ -1,45 +1,70 @@
 import React from "react";
 import Image from "next/image";
-import { Scissors, Sparkles, Paintbrush, Droplet, Info } from "lucide-react";
+import { Scissors, Sparkles, Droplet, Crown, Heart, Gem, Info } from "lucide-react";
 import styles from "./ServicesPricing.module.css";
 
 export default function ServicesPricing() {
   const categories = [
     {
-      title: "HAIRCUTS & STYLING",
+      title: "HAIR CARE & STYLING",
       icon: <Scissors size={18} />,
       items: [
-        { name: "Classic Haircut", price: "LKR 1,800" },
-        { name: "Skin Fade", price: "LKR 2,200" },
-        { name: "Hair Wash & Style", price: "LKR 1,200" },
-        { name: "Kids Haircut", price: "LKR 1,500" },
+        { name: "Gents Classic & Scissor Cut", price: "LKR 1,800" },
+        { name: "Classic & Modern Skin Fade", price: "LKR 2,200" },
+        { name: "Ladies Haircut & Restyle", price: "LKR 3,500" },
+        { name: "Layer Cuts & Blowout", price: "LKR 3,800" },
+        { name: "Hair Coloring & Highlights", price: "LKR 4,500+" },
+        { name: "Hair Setting & Styling", price: "LKR 1,500+" },
       ],
     },
     {
-      title: "BEARD & SHAVING",
-      icon: <Sparkles size={18} />,
-      items: [
-        { name: "Beard Trim", price: "LKR 900" },
-        { name: "Hot Towel Shave", price: "LKR 1,400" },
-        { name: "Haircut + Beard Combo", price: "LKR 2,500" },
-      ],
-    },
-    {
-      title: "HAIR COLOUR",
-      icon: <Paintbrush size={18} />,
-      items: [
-        { name: "Global Colour", price: "LKR 4,500+" },
-        { name: "Grey Blending", price: "LKR 3,000+" },
-        { name: "Highlights", price: "LKR 5,500+" },
-      ],
-    },
-    {
-      title: "HAIR & SCALP CARE",
+      title: "HAIR TREATMENTS",
       icon: <Droplet size={18} />,
       items: [
-        { name: "Scalp Treatment", price: "LKR 2,800" },
-        { name: "Deep Conditioning", price: "LKR 2,200" },
-        { name: "Hair Spa", price: "LKR 3,500" },
+        { name: "Deep Hair Conditioning", price: "LKR 2,500+" },
+        { name: "Restorative Keratin Treatment", price: "LKR 8,000+" },
+        { name: "Nourishing Oil Treatment", price: "LKR 2,200+" },
+        { name: "Scalp Care & Revitalizing Mask", price: "LKR 3,200" },
+      ],
+    },
+    {
+      title: "GROOMING & BEARD",
+      icon: <Sparkles size={18} />,
+      items: [
+        { name: "Beard Styling & Trimming", price: "LKR 1,200" },
+        { name: "Traditional Hot Towel Shave", price: "LKR 1,500" },
+        { name: "Haircut + Beard Styling Combo", price: "LKR 2,600" },
+        { name: "Razor Line-Up & Edge Detail", price: "LKR 800" },
+      ],
+    },
+    {
+      title: "FACE & SKIN CARE",
+      icon: <Gem size={18} />,
+      items: [
+        { name: "Hydrafacial Glow Therapy", price: "LKR 6,500+" },
+        { name: "Carbon Laser Peel", price: "LKR 5,500+" },
+        { name: "Luxury 24K Gold Facial", price: "LKR 6,000+" },
+        { name: "Eyebrow Threading & Shaping", price: "LKR 500" },
+      ],
+    },
+    {
+      title: "NAILS & PEDICURE",
+      icon: <Heart size={18} />,
+      items: [
+        { name: "Classic Manicure", price: "LKR 2,200" },
+        { name: "High-Gloss Gel Pedicure", price: "LKR 3,500" },
+        { name: "Soothing Jelly Pedicure Spa", price: "LKR 4,200" },
+        { name: "Complete Mani-Pedi Combo", price: "LKR 5,000" },
+      ],
+    },
+    {
+      title: "BEAUTY & DRESSING",
+      icon: <Crown size={18} />,
+      items: [
+        { name: "Professional Event Makeup", price: "LKR 5,500+" },
+        { name: "Event & Saree Dressing", price: "LKR 3,500+" },
+        { name: "Bridal Styling & Dressing", price: "LKR 12,000+" },
+        { name: "Photoshoot Ready Glam", price: "LKR 7,500+" },
       ],
     },
   ];

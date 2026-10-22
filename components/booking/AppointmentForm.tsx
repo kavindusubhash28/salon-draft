@@ -63,6 +63,7 @@ export default function AppointmentForm() {
   );
 
   const timeSlots = [
+    "08:30 AM",
     "09:30 AM",
     "10:30 AM",
     "11:45 AM",
@@ -70,7 +71,8 @@ export default function AppointmentForm() {
     "03:00 PM",
     "04:30 PM",
     "06:00 PM",
-    "07:15 PM",
+    "07:30 PM",
+    "08:45 PM",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {

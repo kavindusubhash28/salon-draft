@@ -8,15 +8,15 @@ import styles from "./ContactLocation.module.css";
 const LOCATION_FEATURES = [
   {
     icon: MapPin,
-    text: "No. 123, High Level Road, Maharagama, Colombo, Sri Lanka",
+    text: "304 High Level Road, Gamsaba Junction, Nugegoda 10250, Sri Lanka",
   },
   {
     icon: Car,
-    text: "Ample parking available",
+    text: "Ample parking available near Gamsaba Junction",
   },
   {
     icon: Train,
-    text: "Easily accessible by bus and train",
+    text: "Easily accessible by High Level Road buses and Nugegoda railway",
   },
 ];
 
@@ -29,9 +29,10 @@ export default function ContactLocation() {
           <span className={styles.overline}>VISIT OUR SALON</span>
           <h2 className={styles.title}>Our Location</h2>
           <p className={styles.description}>
-            Find us at our main branch in Maharagama. Conveniently located with
-            easy access and parking, we welcome you to experience our premium
-            grooming services in a comfortable and stylish environment.
+            Find us on High Level Road at Gamsaba Junction, Nugegoda. Conveniently
+            located with easy access and dedicated parking, we welcome you to
+            experience our full range of salon services in a modern, stylish
+            setting. Open daily from 8:00 AM – 10:00 PM.
           </p>
 
           <ul className={styles.featuresList}>
@@ -53,13 +54,13 @@ export default function ContactLocation() {
         <div className={styles.mapWrapper}>
           <Image
             src="/images/contact_maharagama_map.jpg"
-            alt="Location Map of Three Brothers Salon Cuts in Maharagama Colombo"
+            alt="Location Map of Three Brothers Salon Cuts in Nugegoda Colombo"
             fill
             sizes="(max-width: 992px) 100vw, 55vw"
             className={styles.mapImg}
           />
           <a
-            href="https://maps.google.com/?q=Maharagama+Colombo+Sri+Lanka"
+            href="https://maps.google.com/?q=304+High+Level+Road+Gamsaba+Junction+Nugegoda+10250+Sri+Lanka"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mapLinkOverlay}

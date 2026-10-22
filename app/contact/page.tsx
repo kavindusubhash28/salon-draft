@@ -9,7 +9,7 @@ import ContactCTA from "@/components/contact/ContactCTA";
 export const metadata: Metadata = {
   title: "Contact & Book Appointment | Three Brothers Salon Cuts",
   description:
-    "Let's book your next look. Get in touch with Three Brothers Salon Cuts at Maharagama, Colombo. Reserve appointments, view opening hours, and direct WhatsApp booking.",
+    "Let's book your next look. Get in touch with Three Brothers Salon Cuts at Gamsaba Junction, Nugegoda 10250. Reserve appointments, view opening hours, and direct WhatsApp booking.",
 };
 
 export default function ContactPage() {

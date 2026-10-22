@@ -11,7 +11,7 @@ export default function ContactBookingForm() {
     date: "",
     time: "",
     service: "",
-    branch: "Maharagama (Main Branch)",
+    branch: "Nugegoda (304 High Level Rd, Gamsaba Junction)",
     message: "",
   });
 
@@ -80,7 +80,7 @@ export default function ContactBookingForm() {
                 Appointment Request Received!
               </h3>
               <p style={{ margin: "0 0 16px" }}>
-                Thank you, <strong>{formData.fullName}</strong>. Our Maharagama
+                Thank you, <strong>{formData.fullName}</strong>. Our Nugegoda
                 team will reach out to <strong>{formData.phone}</strong> shortly to
                 confirm your slot.
               </p>
@@ -191,23 +191,15 @@ export default function ContactBookingForm() {
                     className={styles.selectField}
                   >
                     <option value="">Select a service</option>
-                    <option value="Haircuts & Styling">Haircuts & Styling</option>
-                    <option value="Beard & Shaving">Beard & Shaving</option>
-                    <option value="Hair Colour">Hair Colour</option>
-                    <option value="Hair & Scalp Care">Hair & Scalp Care</option>
-                    <option value="Kids & Teens Cuts">Kids & Teens Cuts</option>
-                    <option value="Special Occasion Grooming">
-                      Special Occasion Grooming
-                    </option>
-                    <option value="Essential Refresh Package">
-                      Essential Refresh Package (LKR 2,700)
-                    </option>
-                    <option value="Signature Grooming Package">
-                      Signature Grooming Package (LKR 3,400)
-                    </option>
-                    <option value="Premium Transformation Package">
-                      Premium Transformation (LKR 5,800)
-                    </option>
+                    <option value="Hair Care & Styling">Hair Care &amp; Styling (Haircuts, Fades, Coloring, Layers)</option>
+                    <option value="Treatments">Treatments (Conditioning, Keratin &amp; Oil Treatments)</option>
+                    <option value="Grooming & Beard">Grooming &amp; Beard Styling</option>
+                    <option value="Face & Skin Care">Face &amp; Skin Care (Hydrafacial, Carbon Peel, Gold Facial, Threading)</option>
+                    <option value="Nails">Nails (Manicure, Gel &amp; Jelly Pedicure)</option>
+                    <option value="Beauty & Dressing">Beauty &amp; Dressing (Makeup &amp; Event Dressing)</option>
+                    <option value="Essential Refresh Package">Essential Refresh Package (LKR 2,700)</option>
+                    <option value="Signature Grooming Package">Signature Grooming Package (LKR 3,400)</option>
+                    <option value="Premium Transformation Package">Premium Transformation (LKR 5,800)</option>
                   </select>
                 </div>
 
@@ -223,11 +215,8 @@ export default function ContactBookingForm() {
                     onChange={handleChange}
                     className={styles.selectField}
                   >
-                    <option value="Maharagama (Main Branch)">
-                      Maharagama (Main Branch)
-                    </option>
-                    <option value="Colombo 03 (Flagship)">
-                      Colombo 03 (Flagship)
+                    <option value="Nugegoda (304 High Level Rd, Gamsaba Junction)">
+                      Nugegoda (304 High Level Rd, Gamsaba Junction)
                     </option>
                   </select>
                 </div>

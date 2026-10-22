@@ -19,12 +19,12 @@ export default function Footer() {
   ];
 
   const serviceLinks = [
-    { label: "Haircuts & Styling", href: "/services#what-we-offer" },
-    { label: "Beard & Shaving", href: "/services#what-we-offer" },
-    { label: "Hair Colour", href: "/services#what-we-offer" },
-    { label: "Hair & Scalp Care", href: "/services#what-we-offer" },
-    { label: "Kids & Teens Cuts", href: "/services#what-we-offer" },
-    { label: "Special Occasion Grooming", href: "/services#what-we-offer" },
+    { label: "Hair Care & Styling", href: "/services#what-we-offer" },
+    { label: "Treatments", href: "/services#what-we-offer" },
+    { label: "Grooming & Beard", href: "/services#what-we-offer" },
+    { label: "Face & Skin Care", href: "/services#what-we-offer" },
+    { label: "Nails & Pedicure", href: "/services#what-we-offer" },
+    { label: "Beauty & Dressing", href: "/services#what-we-offer" },
   ];
 
   return (
@@ -88,12 +88,12 @@ export default function Footer() {
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
                 <MapPin size={16} className={styles.contactIcon} />
-                <span>No. 123, High Level Road, Maharagama, Colombo, Sri Lanka</span>
+                <span>304 High Level Road, Gamsaba Junction, Nugegoda 10250, Sri Lanka</span>
               </div>
 
               <div className={styles.contactItem}>
                 <Phone size={16} className={styles.contactIcon} />
-                <a href="tel:+94771234567">+94 77 123 4567</a>
+                <a href="tel:+94117210081">+94 117 210 081 / +94 78 972 7272</a>
               </div>
 
               <div className={styles.contactItem}>
@@ -104,11 +104,11 @@ export default function Footer() {
               <div className={styles.contactItem}>
                 <MessageSquare size={16} className={styles.contactIcon} />
                 <a
-                  href="https://wa.me/94771234567"
+                  href="https://wa.me/94789727272"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +94 77 123 4567
+                  +94 78 972 7272 (WhatsApp)
                 </a>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Follow Us</h4>
             <div className={styles.followList}>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/threebrotherssaloncuts/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
@@ -133,7 +133,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/ThreeBrothersSalonCuts"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
@@ -145,15 +145,15 @@ export default function Footer() {
               </a>
             </div>
             <p className={styles.followText}>
-              Stay connected for our latest works, offers and updates.
+              Open Mon – Sun, 8:00 AM – 10:00 PM. Follow us for transformations & styles.
             </p>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
-          <div>&copy; 2024 Three Brothers Salon Cuts. All rights reserved.</div>
-          <div>Designed with style for sharper men.</div>
+          <div>&copy; {new Date().getFullYear()} Three Brothers Salon Cuts. All rights reserved.</div>
+          <div>304 High Level Road, Gamsaba Junction, Nugegoda • Open Daily 8 AM – 10 PM</div>
         </div>
       </div>
     </footer>

@@ -42,7 +42,7 @@ export default function ContactDetails() {
           <span className={styles.subheading}>Get in Touch</span>
           <h1 className={styles.title}>Contact The Atelier</h1>
           <p className={styles.description}>
-            Situated on Galle Road, Colombo 03 opposite Liberty Arcade.
+            Situated at 304 High Level Road, Gamsaba Junction, Nugegoda 10250.
           </p>
         </div>
 

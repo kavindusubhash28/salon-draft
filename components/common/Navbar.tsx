@@ -224,12 +224,12 @@ export default function Navbar() {
             <div className={styles.drawerFooter}>
               <div className={styles.drawerInfoRow}>
                 <strong>Location:</strong>
-                No. 123, High Level Road, Maharagama, Colombo
+                304 High Level Road, Gamsaba Junction, Nugegoda
               </div>
 
               <div className={styles.drawerInfoRow}>
                 <strong>Phone & WhatsApp:</strong>
-                +94 77 123 4567
+                +94 117 210 081 / +94 78 972 7272
               </div>
 
               <Link
