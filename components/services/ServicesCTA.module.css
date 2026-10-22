@@ -1,0 +1,242 @@
+.section {
+  position: relative;
+  background-color: #12100e;
+  color: #f7f4ee;
+  padding: 6.5rem 2rem 7rem;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bgContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(18, 16, 14, 0.88) 0%,
+    rgba(18, 16, 14, 0.96) 100%
+  );
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .splitGrid {
+    grid-template-columns: 1.2fr 0.95fr;
+    gap: 4.5rem;
+  }
+}
+
+/* Left Content Column */
+.contentCol {
+  max-width: 580px;
+}
+
+.overline {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c5925a;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.6rem;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #b5ada4;
+  margin: 0 0 2.4rem;
+}
+
+.btnRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #b37346;
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid #b37346;
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #9c6035;
+  border-color: #9c6035;
+  transform: translateY(-1px);
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f7f4ee;
+  padding: 0.85rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+.whatsappBtn:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Right Column: Floating Glass Card */
+.cardCol {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 900px) {
+  .cardCol {
+    justify-content: flex-end;
+  }
+}
+
+.infoGlassCard {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(197, 146, 90, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  color: #c5925a;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoHeading {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.25rem;
+}
+
+.infoLine1 {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #d1c8be;
+  margin: 0;
+}
+
+.infoLine2 {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #8c8378;
+  margin: 0.15rem 0 0;
+}
+
+/* Cursive script flourish */
+.scriptFlourish {
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  display: none;
+  flex-direction: column;
+  font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive, serif;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.75);
+  transform: rotate(-8deg);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (min-width: 1280px) {
+  .scriptFlourish {
+    display: flex;
+  }
+}

@@ -1,0 +1,185 @@
+.heroSection {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background-color: #12100e;
+  overflow: hidden;
+  padding-top: 8rem;
+  padding-bottom: 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    min-height: 85vh;
+    padding-top: 10rem;
+    padding-bottom: 6.5rem;
+  }
+}
+
+.imageContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(16, 13, 11, 0.94) 0%,
+    rgba(16, 13, 11, 0.82) 45%,
+    rgba(16, 13, 11, 0.45) 75%,
+    rgba(16, 13, 11, 0.25) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .heroOverlay {
+    background: rgba(16, 13, 11, 0.88);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentWrap {
+  max-width: 600px;
+}
+
+.overline {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c5925a;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1.12;
+  font-weight: 600;
+  color: #f7f4ee;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.35rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4.4rem;
+  }
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #b5ada4;
+  margin: 0 0 2.4rem;
+  max-width: 480px;
+}
+
+.btnRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.bookBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #b37346;
+  color: #ffffff;
+  padding: 0.85rem 1.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid #b37346;
+  transition: all 0.25s ease;
+}
+
+.bookBtn:hover {
+  background-color: #9c6035;
+  border-color: #9c6035;
+  transform: translateY(-1px);
+}
+
+.viewPricesBtn {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: #f7f4ee;
+  padding: 0.85rem 1.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.viewPricesBtn:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Right cursive script flourish */
+.scriptFlourish {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive, serif;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  color: rgba(255, 255, 255, 0.82);
+  transform: rotate(-7deg);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  padding-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .scriptFlourish {
+    display: flex;
+  }
+}
+
+.lifestyleText {
+  border-bottom: 2px solid rgba(197, 146, 90, 0.75);
+  padding-bottom: 4px;
+}

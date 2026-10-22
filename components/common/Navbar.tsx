@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar, ArrowRight } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -66,7 +66,9 @@ export default function Navbar() {
         {/* Right: Book Appointment Button & Mobile Toggle */}
         <div className={styles.rightActions}>
           <Link href="/booking" className={styles.bookBtn}>
-            BOOK APPOINTMENT
+            <Calendar size={14} className={styles.btnCalendar} />
+            <span>Book Appointment</span>
+            <ArrowRight size={13} className={styles.btnArrow} />
           </Link>
           <button
             className={styles.mobileToggle}

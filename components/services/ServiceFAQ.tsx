@@ -1,74 +1,108 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, MessageSquare } from "lucide-react";
-import { FAQS, SALON_INFO } from "@/lib/salon-data";
+import Image from "next/image";
+import { Plus, Minus } from "lucide-react";
 import styles from "./ServiceFAQ.module.css";
 
 export default function ServiceFAQ() {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const toggle = (idx: number) => {
-    setOpenIdx(openIdx === idx ? null : idx);
+  const faqs = [
+    {
+      q: "Do I need an appointment?",
+      a: "While appointments are recommended to ensure your preferred time, we also welcome walk-ins based on availability.",
+    },
+    {
+      q: "How long does a haircut take?",
+      a: "A precision haircut usually takes 35–45 minutes, including an initial consultation, hair wash, and custom styling.",
+    },
+    {
+      q: "Do you offer consultations before colour services?",
+      a: "Yes, every colour service begins with an in-depth consultation and strand assessment to ensure safe and lasting results.",
+    },
+    {
+      q: "Are walk-ins accepted?",
+      a: "Yes, walk-ins are welcomed throughout the day depending on barber chair availability.",
+    },
+    {
+      q: "Which package is best for a full grooming session?",
+      a: "Our Signature Grooming and Premium Transformation packages offer the most comprehensive care and exceptional value.",
+    },
+  ];
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="faq">
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.subheading}>Frequently Addressed</span>
-          <h2 className={styles.title}>Service &amp; Booking Questions</h2>
-          <p className={styles.description}>
-            Everything you need to know regarding bookings, walk-ins, and studio etiquette.
-          </p>
-        </div>
+        <div className={styles.splitGrid}>
+          {/* Left Visual Column with Script Flourish */}
+          <div className={styles.visualCol}>
+            <div className={styles.chairImageWrap}>
+              <Image
+                src="/images/experience_chair.jpg"
+                alt="Three Brothers Salon Experience Chair"
+                fill
+                className={styles.chairImg}
+              />
+              <div className={styles.imageOverlay} />
+            </div>
 
-        <div className={styles.faqList}>
-          {FAQS.map((faq, idx) => {
-            const isOpen = openIdx === idx;
-            return (
-              <div
-                key={idx}
-                className={`${styles.faqItem} ${isOpen ? styles.faqItemOpen : ""}`}
-              >
-                <button
-                  className={styles.questionBtn}
-                  onClick={() => toggle(idx)}
-                  aria-expanded={isOpen}
-                >
-                  <span>{faq.question}</span>
-                  <span
-                    className={`${styles.iconWrap} ${
-                      isOpen ? styles.iconWrapRotated : ""
+            <div className={styles.scriptFlourish}>
+              <span>Good</span>
+              <span>Hair</span>
+              <span>Brighter</span>
+              <span>Days</span>
+            </div>
+          </div>
+
+          {/* Right Column: FAQ Accordion */}
+          <div className={styles.contentCol}>
+            <div className={styles.overlineWrap}>
+              <span className={styles.line} />
+              <span className={styles.overline}>FREQUENTLY ASKED QUESTIONS</span>
+              <span className={styles.line} />
+            </div>
+
+            <h2 className={styles.title}>Your Questions, Answered</h2>
+            <p className={styles.subtitle}>
+              Quick answers to common questions about our services.
+            </p>
+
+            <div className={styles.accordionList}>
+              {faqs.map((faq, index) => {
+                const isOpen = openIndex === index;
+                return (
+                  <div
+                    key={index}
+                    className={`${styles.faqItem} ${
+                      isOpen ? styles.faqItemOpen : ""
                     }`}
                   >
-                    <ChevronDown size={20} />
-                  </span>
-                </button>
-                {isOpen && <div className={styles.answerBox}>{faq.answer}</div>}
-              </div>
-            );
-          })}
-        </div>
+                    <button
+                      className={styles.faqQuestion}
+                      onClick={() => toggleFAQ(index)}
+                      aria-expanded={isOpen}
+                    >
+                      <span>{faq.q}</span>
+                      <span className={styles.toggleIcon}>
+                        {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                      </span>
+                    </button>
 
-        <div className={styles.helpBox}>
-          <h4>Have a specialized request or bridal inquiry?</h4>
-          <p>
-            Send us a message directly with photos of your current hair and your
-            desired outcome for a fast personalized quote.
-          </p>
-          <a
-            href={`https://wa.me/${SALON_INFO.whatsapp.replace(
-              /[^0-9]/g,
-              ""
-            )}?text=Hello%20Three%20Brothers%20Salon!%20I%20have%20a%20question%20about%20your%20services.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.whatsappHelpBtn}
-          >
-            <MessageSquare size={16} />
-            <span>Chat on WhatsApp</span>
-          </a>
+                    {isOpen && (
+                      <div className={styles.faqAnswer}>
+                        <p>{faq.a}</p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

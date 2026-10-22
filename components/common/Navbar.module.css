@@ -112,30 +112,32 @@
 
 .bookBtn {
   display: none;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: rgba(18, 15, 13, 0.25);
-  backdrop-filter: blur(4px);
-  color: #f7f4ee;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.65rem 1.4rem;
-  border-radius: 2px;
+  border: 1px solid #c5925a;
+  background-color: #c5925a;
+  color: #1a1614;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1.35rem;
+  border-radius: 4px;
   text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
   transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(197, 146, 90, 0.25);
 }
 
 @media (min-width: 640px) {
   .bookBtn {
-    display: inline-block;
+    display: inline-flex;
   }
 }
 
 .bookBtn:hover {
-  background: #ffffff;
-  color: #12100e;
-  border-color: #ffffff;
+  background-color: #b37346;
+  border-color: #b37346;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .mobileToggle {
