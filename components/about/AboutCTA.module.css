@@ -1,0 +1,96 @@
+.section {
+  position: relative;
+  background-color: #12100e;
+  color: #f7f4ee;
+  padding: 6.5rem 2rem;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bgContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: right 30%;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(18, 16, 14, 0.98) 0%,
+    rgba(18, 16, 14, 0.92) 48%,
+    rgba(18, 16, 14, 0.65) 75%,
+    rgba(18, 16, 14, 0.3) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .bgOverlay {
+    background: rgba(18, 16, 14, 0.9);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contentWrap {
+  max-width: 580px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.6rem;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aba298;
+  margin: 0 0 2.2rem;
+}
+
+.bookBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #b37346;
+  color: #ffffff;
+  padding: 0.9rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid #b37346;
+  transition: all 0.25s ease;
+}
+
+.bookBtn:hover {
+  background-color: #9c6035;
+  border-color: #9c6035;
+  transform: translateY(-1px);
+}

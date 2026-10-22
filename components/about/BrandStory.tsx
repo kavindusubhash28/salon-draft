@@ -3,48 +3,73 @@ import Image from "next/image";
 import styles from "./BrandStory.module.css";
 
 export default function BrandStory() {
+  const stats = [
+    { number: "3", label: "BROTHERS" },
+    { number: "5+", label: "YEARS OF EXPERIENCE" },
+    { number: "1000+", label: "HAPPY CLIENTS" },
+  ];
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.heroBlock}>
-          <span className={styles.subheading}>The Origin</span>
-          <h1 className={styles.title}>Three Brothers. Pure Craft.</h1>
-          <p className={styles.leadDesc}>
-            Built on generational respect for traditional blade work and modern
-            hair architecture.
-          </p>
-        </div>
+        <div className={styles.storyGrid}>
+          {/* Left: Collage with Main Team Image & Inset Tools */}
+          <div className={styles.visualCol}>
+            <div className={styles.mainImageWrap}>
+              <Image
+                src="/images/about_team_story.jpg"
+                alt="Three Brothers Barber Team Brotherhood"
+                fill
+                className={styles.mainImg}
+              />
+            </div>
 
-        <div className={styles.contentGrid}>
-          <div className={styles.imageWrapper}>
-            <Image
-              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=900&auto=format&fit=crop"
-              alt="Three Brothers Barber Craftsmanship"
-              width={700}
-              height={550}
-              className={styles.storyImg}
-            />
-            <div className={styles.badgeOverlay}>
-              Est. Colombo &bull; Family Owned
+            <div className={styles.insetCard}>
+              <div className={styles.insetImageWrap}>
+                <Image
+                  src="/images/barber_tools_counter.jpg"
+                  alt="Precision Barber Equipment"
+                  fill
+                  className={styles.insetImg}
+                />
+              </div>
             </div>
           </div>
 
-          <div className={styles.textColumn}>
-            <h3>A Family Dedicated to Hair Craft</h3>
-            <p>
-              Growing up around barber chairs and straight razors, Kasun, Tharindu,
-              and Nuwan understood that a great haircut shapes confidence, posture, and presence.
-            </p>
-            <p className={styles.highlightQuote}>
-              &ldquo;We created a space where gentlemen receive surgical skin fades
-              and hot towel shaves, while ladies enjoy bespoke balayage and restorative
-              care in complete comfort.&rdquo;
-            </p>
-            <p>
-              Kasun brings European blade discipline, Tharindu leads precision scissor
-              geometry, and Nuwan commands organic color chemistry. Together, they
-              run Three Brothers on Galle Road, Colombo 03.
-            </p>
+          {/* Right: Narrative & 3 Stat Counters */}
+          <div className={styles.contentCol}>
+            <span className={styles.overline}>OUR STORY</span>
+
+            <h2 className={styles.title}>
+              Built on Passion,
+              <br />
+              Driven by Brotherhood.
+            </h2>
+
+            <div className={styles.paragraphs}>
+              <p>
+                Three Brothers Salon Cuts was founded with a simple idea — to
+                create a space where great hair, genuine service and real
+                connections come together. What started as a shared passion
+                among three brothers has grown into a trusted grooming space
+                loved by our community.
+              </p>
+              <p>
+                We believe a great haircut is more than just a style — it’s a
+                confidence boost, a fresh start and a way to express who you
+                are. Every client who walks in is part of our journey, and we
+                continue to raise the standard in men’s and unisex grooming.
+              </p>
+            </div>
+
+            <div className={styles.statsRow}>
+              {stats.map((stat, idx) => (
+                <div key={idx} className={styles.statItem}>
+                  <span className={styles.statNumber}>{stat.number}</span>
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

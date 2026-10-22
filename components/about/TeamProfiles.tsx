@@ -1,53 +1,71 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Calendar } from "lucide-react";
-import { TEAM_MEMBERS } from "@/lib/salon-data";
 import styles from "./TeamProfiles.module.css";
 
 export default function TeamProfiles() {
+  const brothers = [
+    {
+      num: "BROTHER 01",
+      title: "Haircut Specialist",
+      desc: "Expert in modern cuts, fades and custom styles tailored to your look.",
+      image: "/images/hero_barber.jpg",
+    },
+    {
+      num: "BROTHER 02",
+      title: "Styling & Grooming",
+      desc: "Specializes in styling, beard grooming and detailed finishing.",
+      image: "/images/barber_craftsman.jpg",
+    },
+    {
+      num: "BROTHER 03",
+      title: "Colour & Scalp Care",
+      desc: "Expert in hair colouring, treatments and scalp care solutions.",
+      image: "/images/barber_portrait_kasun.jpg",
+    },
+  ];
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles.subheading}>The Craftsmen</span>
-          <h2 className={styles.title}>The Three Brothers</h2>
+        {/* Header row */}
+        <div className={styles.headerRow}>
+          <div className={styles.titleColumn}>
+            <span className={styles.categoryLabel}>MEET THE TEAM</span>
+            <h2 className={styles.title}>
+              Three Brothers.
+              <br />
+              One Vision.
+            </h2>
+          </div>
+
+          <div className={styles.descColumn}>
+            <p className={styles.headerDesc}>
+              Different personalities, one shared passion. Together, we bring
+              skill, creativity and dedication to give you the best grooming
+              experience. Each of us plays a unique role, but we all share the
+              same goal — to make you look and feel your best.
+            </p>
+          </div>
         </div>
 
-        <div className={styles.teamGrid}>
-          {TEAM_MEMBERS.map((member) => (
-            <div key={member.id} className={styles.memberCard}>
+        {/* 3 Brothers Grid */}
+        <div className={styles.brothersGrid}>
+          {brothers.map((brother, idx) => (
+            <div key={idx} className={styles.brotherCard}>
               <div className={styles.imageWrap}>
                 <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={500}
-                  height={600}
-                  className={styles.memberImg}
+                  src={brother.image}
+                  alt={brother.title}
+                  width={550}
+                  height={550}
+                  className={styles.brotherImg}
                 />
-                <span className={styles.experienceBadge}>{member.experience}</span>
               </div>
 
-              <div className={styles.infoWrap}>
-                <div>
-                  <h3 className={styles.memberName}>{member.name}</h3>
-                  <div className={styles.memberRole}>{member.role}</div>
-
-                  <div className={styles.specialtyBox}>
-                    <span className={styles.specialtyLabel}>Specialty</span>
-                    <span className={styles.specialtyText}>{member.specialty}</span>
-                  </div>
-
-                  <p className={styles.memberBio}>{member.bio}</p>
-                </div>
-
-                <Link
-                  href={`/booking?stylist=${encodeURIComponent(member.name)}`}
-                  className={styles.bookBtn}
-                >
-                  <Calendar size={14} />
-                  <span>Book {member.name.split(" ")[0]}&apos;s Chair</span>
-                </Link>
+              <div className={styles.cardInfo}>
+                <span className={styles.brotherNum}>{brother.num}</span>
+                <h3 className={styles.brotherTitle}>{brother.title}</h3>
+                <p className={styles.brotherDesc}>{brother.desc}</p>
               </div>
             </div>
           ))}
