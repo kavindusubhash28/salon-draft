@@ -1,60 +1,88 @@
 .heroSection {
   position: relative;
-  min-height: 85vh;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #12100e;
   overflow: hidden;
   padding-top: 7rem;
+  user-select: none;
 }
 
 @media (min-width: 768px) {
   .heroSection {
-    min-height: 92vh;
+    min-height: 94vh;
     padding-top: 9rem;
   }
 }
 
+/* Image Slider Container */
 .imageContainer {
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-.heroImage {
-  object-fit: cover;
-  object-position: center 25%;
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.05);
 }
 
+.slideActive {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+/* Dark gradient overlay for text readability */
 .heroOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(16, 13, 11, 0.88) 0%,
-    rgba(16, 13, 11, 0.72) 42%,
-    rgba(16, 13, 11, 0.3) 75%,
-    rgba(16, 13, 11, 0.15) 100%
+    rgba(14, 12, 10, 0.92) 0%,
+    rgba(14, 12, 10, 0.78) 45%,
+    rgba(14, 12, 10, 0.4) 75%,
+    rgba(14, 12, 10, 0.25) 100%
   );
+  z-index: 2;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
   .heroOverlay {
-    background: rgba(16, 13, 11, 0.78);
+    background: linear-gradient(
+      180deg,
+      rgba(14, 12, 10, 0.75) 0%,
+      rgba(14, 12, 10, 0.85) 60%,
+      rgba(14, 12, 10, 0.95) 100%
+    );
   }
 }
 
+/* Hero Content */
 .heroContainer {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3rem 2rem 5rem;
+  padding: 3rem 2rem 4rem;
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .heroContent {
@@ -63,7 +91,7 @@
 
 .overline {
   display: inline-block;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.22em;
@@ -73,7 +101,7 @@
 }
 
 .heroTitle {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif, "Playfair Display", serif);
   font-size: 2.8rem;
   line-height: 1.1;
   font-weight: 700;
@@ -96,7 +124,7 @@
 }
 
 .tagline {
-  font-family: var(--font-sans);
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -127,18 +155,21 @@
   text-decoration: none;
   border: 1px solid #b37346;
   transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(179, 115, 70, 0.3);
 }
 
 .primaryBtn:hover {
   background-color: #9c6035;
   border-color: #9c6035;
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(179, 115, 70, 0.45);
 }
 
 .secondaryBtn {
   display: inline-flex;
   align-items: center;
-  background-color: transparent;
+  background-color: rgba(18, 16, 14, 0.4);
+  backdrop-filter: blur(8px);
   color: #f7f4ee;
   padding: 0.9rem 1.8rem;
   font-size: 0.78rem;
@@ -147,14 +178,92 @@
   text-transform: uppercase;
   border-radius: 2px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   transition: all 0.25s ease;
 }
 
 .secondaryBtn:hover {
   border-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
+}
+
+/* Slider Controls & Indicators */
+.sliderControls {
+  position: absolute;
+  bottom: 5.5rem;
+  right: 2rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.slideNavBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(18, 16, 14, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slideNavBtn:hover {
+  background: #c5925a;
+  border-color: #c5925a;
+  color: #12100e;
+  transform: scale(1.06);
+}
+
+.indicatorsGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indicatorBar {
+  position: relative;
+  width: 38px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.indicatorBarActive {
+  background: #c5925a;
+  width: 52px;
+}
+
+/* Progress fill animation inside active indicator */
+.indicatorBarActive::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  animation: progressFill 5s linear forwards;
+}
+
+@keyframes progressFill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* Bottom Ticker Strip */
@@ -175,7 +284,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.22em;
@@ -191,7 +300,17 @@
   margin: 0 0.25rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .sliderControls {
+    bottom: 4.8rem;
+    right: 1.5rem;
+  }
+
+  .slideNavBtn {
+    width: 34px;
+    height: 34px;
+  }
+
   .tickerContent {
     gap: 0.75rem;
     font-size: 0.65rem;
