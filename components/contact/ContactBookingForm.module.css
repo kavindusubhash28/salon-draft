@@ -108,16 +108,7 @@
   margin: 0;
 }
 
-/* Cursive Flourish on left */
-.cursiveFlourish {
-  font-family: var(--font-cursive, "Caveat", "Brush Script MT", cursive);
-  font-size: 2.6rem;
-  line-height: 1.15;
-  color: rgba(220, 205, 185, 0.7);
-  transform: rotate(-8deg);
-  margin-top: 10px;
-  pointer-events: none;
-}
+
 
 /* Right Column: Form Card */
 .formCard {

@@ -55,21 +55,7 @@
   );
 }
 
-.scriptFlourish {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  display: flex;
-  flex-direction: column;
-  font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive, serif;
-  font-size: 2.4rem;
-  line-height: 1.1;
-  color: #f7f4ee;
-  transform: rotate(-8deg);
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-  user-select: none;
-  z-index: 2;
-}
+
 
 /* Right Content Column */
 .contentCol {

@@ -94,14 +94,6 @@ export default function ServicesCTA() {
             </div>
           </div>
         </div>
-
-        {/* Cursive script flourish on far right */}
-        <div className={styles.scriptFlourish}>
-          <span>Great</span>
-          <span>Men</span>
-          <span>Take Care</span>
-          <span>Of Themselves</span>
-        </div>
       </div>
     </section>
   );

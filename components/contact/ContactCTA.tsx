@@ -31,17 +31,6 @@ export default function ContactCTA() {
             </a>
           </div>
         </div>
-
-        {/* Right Cursive Script Flourish */}
-        <div className={styles.flourishWrapper} aria-hidden="true">
-          <div className={styles.flourishText}>
-            More
-            <br />
-            Than A Cut
-            <br />
-            It's A Lifestyle
-          </div>
-        </div>
       </div>
     </section>
   );

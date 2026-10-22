@@ -35,7 +35,7 @@ export default function ContactBookingForm() {
     <section id="booking-form" className={styles.bookingSection}>
       <div className={styles.bookingOverlay} />
       <div className={styles.container}>
-        {/* Left Column: Heading, Info Box, and Cursive Flourish */}
+        {/* Left Column: Heading and Info Box */}
         <div className={styles.infoCol}>
           <span className={styles.overline}>MAKE AN APPOINTMENT</span>
           <h2 className={styles.title}>Book Your Appointment</h2>
@@ -56,14 +56,6 @@ export default function ContactBookingForm() {
                 date and time.
               </p>
             </div>
-          </div>
-
-          <div className={styles.cursiveFlourish} aria-hidden="true">
-            Same
-            <br />
-            Great Cuts
-            <br />
-            See You Soon!
           </div>
         </div>
 

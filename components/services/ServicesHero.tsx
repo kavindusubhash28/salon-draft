@@ -45,13 +45,6 @@ export default function ServicesHero() {
             </a>
           </div>
         </div>
-
-        {/* Right cursive script flourish */}
-        <div className={styles.scriptFlourish}>
-          <span>More</span>
-          <span>Than A Cut</span>
-          <span className={styles.lifestyleText}>It&apos;s A Lifestyle</span>
-        </div>
       </div>
     </section>
   );

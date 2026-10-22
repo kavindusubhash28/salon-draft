@@ -39,19 +39,6 @@ export default function ContactHero() {
             </a>
           </div>
         </div>
-
-        {/* Right Cursive Flourish */}
-        <div className={styles.flourishWrapper} aria-hidden="true">
-          <div className={styles.flourishText}>
-            Good
-            <br />
-            Hair
-            <br />
-            Brings
-            <br />
-            Good Days.
-          </div>
-        </div>
       </div>
     </section>
   );

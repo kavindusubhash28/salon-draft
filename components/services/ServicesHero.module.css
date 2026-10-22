@@ -158,28 +158,4 @@
   color: #ffffff;
 }
 
-/* Right cursive script flourish */
-.scriptFlourish {
-  display: none;
-  flex-direction: column;
-  align-items: flex-end;
-  font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive, serif;
-  font-size: 2.2rem;
-  line-height: 1.15;
-  color: rgba(255, 255, 255, 0.82);
-  transform: rotate(-7deg);
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  user-select: none;
-  padding-right: 2rem;
-}
 
-@media (min-width: 1024px) {
-  .scriptFlourish {
-    display: flex;
-  }
-}
-
-.lifestyleText {
-  border-bottom: 2px solid rgba(197, 146, 90, 0.75);
-  padding-bottom: 4px;
-}

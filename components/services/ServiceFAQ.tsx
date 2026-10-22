@@ -50,13 +50,6 @@ export default function ServiceFAQ() {
               />
               <div className={styles.imageOverlay} />
             </div>
-
-            <div className={styles.scriptFlourish}>
-              <span>Good</span>
-              <span>Hair</span>
-              <span>Brighter</span>
-              <span>Days</span>
-            </div>
           </div>
 
           {/* Right Column: FAQ Accordion */}

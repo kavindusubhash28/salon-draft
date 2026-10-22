@@ -129,26 +129,7 @@
   transform: translateY(-2px);
 }
 
-/* Right handwriting script flourish */
-.flourishWrapper {
-  display: block;
-}
 
-.flourishText {
-  font-family: var(--font-cursive, "Caveat", "Brush Script MT", cursive);
-  font-size: 2.8rem;
-  line-height: 1.15;
-  color: rgba(235, 222, 205, 0.85);
-  transform: rotate(-7deg);
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-@media (max-width: 992px) {
-  .flourishWrapper {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
   .ctaSection {
