@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import HairstyleGallery from "@/components/work/HairstyleGallery";
-import Transformations from "@/components/work/Transformations";
-import AppointmentCTA from "@/components/home/AppointmentCTA";
+import WorkHero from "@/components/work/WorkHero";
+import WorkGallery from "@/components/work/WorkGallery";
+import WorkTransformations from "@/components/work/WorkTransformations";
+import WorkFeaturedStyle from "@/components/work/WorkFeaturedStyle";
+import WorkCTA from "@/components/work/WorkCTA";
 
 export const metadata: Metadata = {
-  title: "Our Work & Lookbook | Three Brothers Salon Cuts",
+  title: "Our Work & Styles Lookbook | Three Brothers Salon Cuts",
   description:
-    "Explore our filterable portfolio of precision gentleman fades, beard contours, women's layered restyles, dimensional balayage, and real before/after client transformations.",
+    "Real People. Real Styles. Explore our collection of modern fades, textured crops, classic cuts, creative razor designs, beard grooming, and client transformations created at Three Brothers Salon Cuts.",
 };
 
 export default function WorkPage() {
   return (
     <>
-      <HairstyleGallery />
-      <Transformations />
-      <AppointmentCTA />
+      <WorkHero />
+      <WorkGallery />
+      <WorkTransformations />
+      <WorkFeaturedStyle />
+      <WorkCTA />
     </>
   );
 }

@@ -1,0 +1,92 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 440px;
+  background-color: #12100e;
+  background-image: url("/images/work_hero_clean_bg.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+/* Gradient overlay on small screens to guarantee readability */
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 16, 14, 0.95) 0%,
+    rgba(18, 16, 14, 0.85) 45%,
+    rgba(18, 16, 14, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contentBox {
+  max-width: 580px;
+}
+
+.overline {
+  display: inline-block;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c5925a;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-size: clamp(2.6rem, 4.8vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.titleHighlight {
+  display: block;
+  color: #c5925a;
+}
+
+.description {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #d1c8be;
+  max-width: 480px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 380px;
+    padding: 110px 0 60px;
+    background-position: 70% center;
+  }
+
+  .contentBox {
+    max-width: 100%;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}

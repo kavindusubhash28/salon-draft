@@ -1,0 +1,114 @@
+.ctaSection {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-color: #0e0c0a;
+  background-image: url("/images/work_cta_clean_bg.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Subtle gradient overlay to enhance text readability on mobile */
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 12, 10, 0.95) 0%,
+    rgba(14, 12, 10, 0.8) 45%,
+    rgba(14, 12, 10, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contentBox {
+  max-width: 520px;
+}
+
+.title {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.titleHighlight {
+  color: #c5925a;
+}
+
+.subtitle {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #d1c8be;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.bookBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #b37346;
+  color: #ffffff;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(179, 115, 70, 0.35);
+}
+
+.bookBtn:hover {
+  background-color: #c58252;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(179, 115, 70, 0.5);
+}
+
+.btnArrow {
+  transition: transform 0.25s ease;
+}
+
+.bookBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    min-height: 340px;
+    padding: 70px 0;
+    background-position: 75% center;
+  }
+
+  .contentBox {
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+}
