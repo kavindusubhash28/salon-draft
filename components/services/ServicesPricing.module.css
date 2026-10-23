@@ -111,11 +111,6 @@
   margin-bottom: 1.25rem;
 }
 
-.cardIcon {
-  color: #c5925a;
-  display: flex;
-  align-items: center;
-}
 
 .cardTitle {
   font-family: var(--font-sans);

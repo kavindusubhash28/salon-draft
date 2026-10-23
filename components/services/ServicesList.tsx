@@ -1,13 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Scissors,
-  Sparkles,
-  Paintbrush,
-  Droplet,
-  User,
-  Crown,
-} from "lucide-react";
 import styles from "./ServicesList.module.css";
 
 export default function ServicesList() {
@@ -17,42 +9,36 @@ export default function ServicesList() {
       title: "Hair Care & Styling",
       desc: "Gents haircuts, classic and modern fades, ladies haircuts, layer cuts, hair coloring, highlights, and hair setting.",
       image: "/images/service_haircut.jpg",
-      icon: <Scissors size={18} strokeWidth={1.8} />,
     },
     {
       id: "treatments",
       title: "Treatments",
       desc: "Hair conditioning, restorative keratin treatments, and nourishing oil treatments for healthy hair.",
       image: "/images/Services/treatments.jpg",
-      icon: <Droplet size={18} strokeWidth={1.8} />,
     },
     {
       id: "grooming-beard",
       title: "Grooming & Beard",
       desc: "Precision beard styling, sharp grooming, and traditional hot towel straight razor shaves.",
       image: "/images/Services/beard.jpg",
-      icon: <Sparkles size={18} strokeWidth={1.8} />,
     },
     {
       id: "face-skin-care",
       title: "Face & Skin Care",
       desc: "Hydrafacials, carbon laser peels, radiant gold facials, and meticulous eyebrow threading.",
       image: "/images/Services/facieal.jpg",
-      icon: <Sparkles size={18} strokeWidth={1.8} />,
     },
     {
       id: "nails",
       title: "Nails",
       desc: "Classic manicures, long-lasting gel pedicures, and rejuvenating jelly pedicures.",
       image: "/images/Services/nails.jpg",
-      icon: <Sparkles size={18} strokeWidth={1.8} />,
     },
     {
       id: "beauty-dressing",
       title: "Beauty & Dressing",
       desc: "Professional makeup artistry and exquisite event dressing for weddings and special occasions.",
       image: "/images/service_occasion.jpg",
-      icon: <Crown size={18} strokeWidth={1.8} />,
     },
   ];
 
@@ -86,7 +72,6 @@ export default function ServicesList() {
                   fill
                   className={styles.cardImg}
                 />
-                <div className={styles.badgeCircle}>{card.icon}</div>
               </div>
 
               <div className={styles.cardContent}>

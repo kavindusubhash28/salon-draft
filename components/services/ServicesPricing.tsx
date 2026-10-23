@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { Scissors, Sparkles, Droplet, Crown, Heart, Gem, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import styles from "./ServicesPricing.module.css";
 
 export default function ServicesPricing() {
   const categories = [
     {
       title: "HAIR CARE & STYLING",
-      icon: <Scissors size={18} />,
       items: [
         { name: "Gents Classic & Scissor Cut", price: "LKR 1,800" },
         { name: "Classic & Modern Skin Fade", price: "LKR 2,200" },
@@ -19,7 +18,6 @@ export default function ServicesPricing() {
     },
     {
       title: "HAIR TREATMENTS",
-      icon: <Droplet size={18} />,
       items: [
         { name: "Deep Hair Conditioning", price: "LKR 2,500+" },
         { name: "Restorative Keratin Treatment", price: "LKR 8,000+" },
@@ -29,7 +27,6 @@ export default function ServicesPricing() {
     },
     {
       title: "GROOMING & BEARD",
-      icon: <Sparkles size={18} />,
       items: [
         { name: "Beard Styling & Trimming", price: "LKR 1,200" },
         { name: "Traditional Hot Towel Shave", price: "LKR 1,500" },
@@ -39,7 +36,6 @@ export default function ServicesPricing() {
     },
     {
       title: "FACE & SKIN CARE",
-      icon: <Gem size={18} />,
       items: [
         { name: "Hydrafacial Glow Therapy", price: "LKR 6,500+" },
         { name: "Carbon Laser Peel", price: "LKR 5,500+" },
@@ -49,7 +45,6 @@ export default function ServicesPricing() {
     },
     {
       title: "NAILS & PEDICURE",
-      icon: <Heart size={18} />,
       items: [
         { name: "Classic Manicure", price: "LKR 2,200" },
         { name: "High-Gloss Gel Pedicure", price: "LKR 3,500" },
@@ -59,7 +54,6 @@ export default function ServicesPricing() {
     },
     {
       title: "BEAUTY & DRESSING",
-      icon: <Crown size={18} />,
       items: [
         { name: "Professional Event Makeup", price: "LKR 5,500+" },
         { name: "Event & Saree Dressing", price: "LKR 3,500+" },
@@ -97,7 +91,6 @@ export default function ServicesPricing() {
           {categories.map((cat, idx) => (
             <div key={idx} className={styles.categoryCard}>
               <div className={styles.cardHeader}>
-                <span className={styles.cardIcon}>{cat.icon}</span>
                 <h3 className={styles.cardTitle}>{cat.title}</h3>
               </div>
 
