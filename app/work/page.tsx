@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import WorkHero from "@/components/work/WorkHero";
 import WorkGallery from "@/components/work/WorkGallery";
-import WorkTransformations from "@/components/work/WorkTransformations";
-import WorkFeaturedStyle from "@/components/work/WorkFeaturedStyle";
 import WorkCTA from "@/components/work/WorkCTA";
 
 export const metadata: Metadata = {
@@ -16,8 +14,6 @@ export default function WorkPage() {
     <>
       <WorkHero />
       <WorkGallery />
-      <WorkTransformations />
-      <WorkFeaturedStyle />
       <WorkCTA />
     </>
   );
