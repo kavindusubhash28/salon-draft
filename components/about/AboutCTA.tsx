@@ -26,7 +26,7 @@ export default function AboutCTA() {
             difference.
           </p>
 
-          <Link href="/booking" className={styles.bookBtn}>
+          <Link href="/contact" className={styles.bookBtn}>
             <span>BOOK AN APPOINTMENT</span>
             <ArrowRight size={15} />
           </Link>

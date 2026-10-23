@@ -119,7 +119,7 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Follow Us</h4>
             <div className={styles.followList}>
               <a
-                href="https://www.instagram.com/threebrotherssaloncuts/"
+                href="https://www.instagram.com/threebrotherssaloncuts?srtk=azBxZjZlMWlxZDV1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}

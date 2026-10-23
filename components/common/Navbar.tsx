@@ -117,7 +117,7 @@ export default function Navbar() {
           {/* When scrolled: Show luxury Hamburger Icon Button on all viewports */}
           {isScrolled ? (
             <>
-              <Link href="/booking" className={styles.bookBtn}>
+              <Link href="/contact" className={styles.bookBtn}>
                 <Calendar size={14} />
                 <span>Book Appointment</span>
               </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
           ) : (
             <>
               {/* When at top: Show regular Book button and mobile toggle */}
-              <Link href="/booking" className={styles.bookBtn}>
+              <Link href="/contact" className={styles.bookBtn}>
                 <Calendar size={14} />
                 <span>Book Appointment</span>
                 <ArrowRight size={13} />
@@ -232,8 +232,37 @@ export default function Navbar() {
                 +94 117 210 081 / +94 78 972 7272
               </div>
 
+              <div className={styles.drawerSocials}>
+                <a
+                  href="https://www.facebook.com/ThreeBrothersSalonCuts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.drawerSocialLink}
+                  aria-label="Follow us on Facebook"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#1877f2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/threebrotherssaloncuts?srtk=azBxZjZlMWlxZDV1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.drawerSocialLink}
+                  aria-label="Follow us on Instagram"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e1306c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+
               <Link
-                href="/booking"
+                href="/contact"
                 className={styles.drawerBookBtn}
                 onClick={() => setDrawerOpen(false)}
               >

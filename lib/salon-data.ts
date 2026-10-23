@@ -80,7 +80,7 @@ export const SALON_INFO = {
   address: "304 High Level Road, Gamsaba Junction, Nugegoda 10250, Sri Lanka",
   landmark: "Gamsaba Junction, High Level Road",
   facebook: "https://www.facebook.com/ThreeBrothersSalonCuts",
-  instagram: "https://www.instagram.com/threebrotherssaloncuts/",
+  instagram: "https://www.instagram.com/threebrotherssaloncuts?srtk=azBxZjZlMWlxZDV1",
   hours: [
     { days: "Monday – Sunday", hours: "8:00 AM – 10:00 PM", status: "Open Daily" },
   ],

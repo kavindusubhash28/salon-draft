@@ -373,6 +373,30 @@
   margin-bottom: 2px;
 }
 
+.drawerSocials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 6px 0 2px;
+}
+
+.drawerSocialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d8cfc5;
+  text-decoration: none;
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.drawerSocialLink:hover {
+  color: #c5925a;
+  transform: translateY(-1px);
+}
+
 .drawerBookBtn {
   display: flex;
   align-items: center;

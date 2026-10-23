@@ -87,7 +87,7 @@ export default function ServicePackages() {
               </div>
 
               <Link
-                href={`/booking?service=${encodeURIComponent(pkg.title)}`}
+                href={`/contact?service=${encodeURIComponent(pkg.title)}`}
                 className={styles.priceBar}
               >
                 <span className={styles.priceAmount}>{pkg.price}</span>

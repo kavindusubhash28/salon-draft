@@ -1,19 +1,21 @@
 .heroSection {
   position: relative;
-  min-height: 70vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   background-color: #12100e;
   overflow: hidden;
-  padding-top: 8rem;
-  padding-bottom: 5rem;
+  padding-top: 6.5rem;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .heroSection {
-    min-height: 78vh;
-    padding-top: 10rem;
-    padding-bottom: 6rem;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
   }
 }
 

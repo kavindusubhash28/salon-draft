@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import styles from "./ServicesHero.module.css";
 
 export interface ServicesHeroService {
@@ -135,13 +136,6 @@ export default function ServicesHero() {
 
   const activeService = SERVICES_SHOWCASE[currentIdx];
 
-  const scrollToServices = () => {
-    const el = document.getElementById("what-we-offer");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       className={styles.heroSection}
@@ -193,17 +187,21 @@ export default function ServicesHero() {
               <span>{activeService.line2}</span>
             </h1>
 
-            <p className={styles.description}>{activeService.description}</p>
+            <p className={styles.description}>
+              Expert grooming, styling, barbering and care — all in one place.
+              From classic cuts to modern trends, we help you look and feel your
+              best.
+            </p>
 
-            <div className={styles.ctaGroup}>
-              <button
-                type="button"
-                onClick={scrollToServices}
-                className={styles.primaryBtn}
-              >
-                <span>EXPLORE SERVICES</span>
-                <ArrowDown size={14} />
-              </button>
+            <div className={styles.btnRow}>
+              <Link href="/contact" className={styles.bookBtn}>
+                <Calendar size={15} />
+                <span>Book Now</span>
+                <ArrowRight size={15} />
+              </Link>
+              <a href="#prices" className={styles.viewPricesBtn}>
+                <span>View Prices</span>
+              </a>
             </div>
           </div>
         </div>
