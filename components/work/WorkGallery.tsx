@@ -77,7 +77,6 @@ const CATEGORIES = [
   "Beard",
   "Hair Colour",
   "Styling",
-  "Transformations",
 ];
 
 export default function WorkGallery() {
@@ -85,21 +84,15 @@ export default function WorkGallery() {
 
   const handleTabClick = (category: string) => {
     setActiveTab(category);
-    if (category === "Transformations") {
-      const el = document.getElementById("transformations");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    }
   };
 
   const filteredItems =
-    activeTab === "All" || activeTab === "Transformations"
+    activeTab === "All"
       ? PORTFOLIO_ITEMS
       : PORTFOLIO_ITEMS.filter((item) => item.category.includes(activeTab));
 
   return (
-    <section className={styles.gallerySection}>
+    <section className={styles.gallerySection} id="gallery">
       <div className={styles.container}>
         {/* Category Filter Bar */}
         <div className={styles.filterBar} role="tablist">
