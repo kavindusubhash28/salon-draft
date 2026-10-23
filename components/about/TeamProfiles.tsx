@@ -67,7 +67,7 @@ export default function TeamProfiles() {
           {/* Watermark Logo Stamp in top-left */}
           <div className={styles.watermarkWrap}>
             <Image
-              src="/images/logo.jpg"
+              src="/images/about/logopng.png"
               alt="Three Brothers Salon Cuts Emblem"
               width={160}
               height={160}

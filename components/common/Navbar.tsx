@@ -246,7 +246,7 @@ export default function Navbar() {
                   <span>Facebook</span>
                 </a>
                 <a
-                  href="https://www.instagram.com/threebrotherssaloncuts/"
+                  href="https://www.instagram.com/threebrotherssaloncuts?srtk=azBxZjZlMWlxZDV1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.drawerSocialLink}
