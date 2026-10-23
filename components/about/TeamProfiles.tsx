@@ -1,74 +1,145 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Scissors, Handshake, ArrowRight } from "lucide-react";
 import styles from "./TeamProfiles.module.css";
 
-export default function TeamProfiles() {
-  const brothers = [
-    {
-      num: "BROTHER 01",
-      title: "Haircut Specialist",
-      desc: "Expert in modern cuts, fades and custom styles tailored to your look.",
-      image: "/images/hero_barber.jpg",
-    },
-    {
-      num: "BROTHER 02",
-      title: "Styling & Grooming",
-      desc: "Specializes in styling, beard grooming and detailed finishing.",
-      image: "/images/barber_craftsman.jpg",
-    },
-    {
-      num: "BROTHER 03",
-      title: "Colour & Scalp Care",
-      desc: "Expert in hair colouring, treatments and scalp care solutions.",
-      image: "/images/barber_portrait_kasun.jpg",
-    },
-  ];
-
+// Custom Comb Icon matching Image 2
+function CombIcon({ size = 22, className }: { size?: number; className?: string }) {
   return (
-    <section className={styles.section}>
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="3" y="6" width="18" height="4" rx="1" />
+      <line x1="5" y1="10" x2="5" y2="18" />
+      <line x1="8" y1="10" x2="8" y2="18" />
+      <line x1="11" y1="10" x2="11" y2="18" />
+      <line x1="14" y1="10" x2="14" y2="18" />
+      <line x1="17" y1="10" x2="17" y2="18" />
+      <line x1="20" y1="10" x2="20" y2="18" />
+    </svg>
+  );
+}
+
+export default function TeamProfiles() {
+  return (
+    <section className={styles.section} id="team">
       <div className={styles.container}>
-        {/* Header row */}
-        <div className={styles.headerRow}>
-          <div className={styles.titleColumn}>
-            <span className={styles.categoryLabel}>MEET THE TEAM</span>
-            <h2 className={styles.title}>
-              Three Brothers.
-              <br />
-              One Vision.
-            </h2>
+        {/* Header */}
+        <div className={styles.header}>
+          <div className={styles.overlineWrap}>
+            <span className={styles.line} />
+            <span className={styles.overline}>MEET THE TEAM</span>
+            <span className={styles.line} />
           </div>
 
-          <div className={styles.descColumn}>
-            <p className={styles.headerDesc}>
-              Different personalities, one shared passion. Together, we bring
-              skill, creativity and dedication to give you the best grooming
-              experience. Each of us plays a unique role, but we all share the
-              same goal — to make you look and feel your best.
+          <h2 className={styles.title}>
+            The Artists <span className={styles.highlight}>Behind the Blades.</span>
+          </h2>
+
+          <p className={styles.description}>
+            Different personalities, one shared passion. Our team brings skill,
+            creativity and genuine care to every client, combining modern
+            techniques with traditional barbering to give you the best
+            experience.
+          </p>
+        </div>
+
+        {/* Centerpiece Team Photo Banner */}
+        <div className={styles.bannerWrapper}>
+          <Image
+            src="/images/team_hero.jpg"
+            alt="Three Brothers Salon Cuts Master Barber Team"
+            fill
+            priority
+            className={styles.bannerImg}
+          />
+
+          {/* Watermark Logo Stamp in top-left */}
+          <div className={styles.watermarkWrap}>
+            <Image
+              src="/images/logo.jpg"
+              alt="Three Brothers Salon Cuts Emblem"
+              width={160}
+              height={160}
+              className={styles.watermarkLogo}
+            />
+          </div>
+
+          {/* Vignette & Gradient Overlays */}
+          <div className={styles.gradientOverlay} />
+
+          {/* Cursive Quote and Ornament on lower-third of photo */}
+          <div className={styles.overlayContent}>
+            <p className={styles.scriptQuote}>
+              Walk in, sit back, and let our team bring your best look to life.
             </p>
+            <div className={styles.ornamentLine}>
+              <span className={styles.flourishLine} />
+              <span className={styles.flourishDiamond} />
+              <span className={styles.flourishLine} />
+            </div>
           </div>
         </div>
 
-        {/* 3 Brothers Grid */}
-        <div className={styles.brothersGrid}>
-          {brothers.map((brother, idx) => (
-            <div key={idx} className={styles.brotherCard}>
-              <div className={styles.imageWrap}>
-                <Image
-                  src={brother.image}
-                  alt={brother.title}
-                  width={550}
-                  height={550}
-                  className={styles.brotherImg}
-                />
-              </div>
-
-              <div className={styles.cardInfo}>
-                <span className={styles.brotherNum}>{brother.num}</span>
-                <h3 className={styles.brotherTitle}>{brother.title}</h3>
-                <p className={styles.brotherDesc}>{brother.desc}</p>
-              </div>
+        {/* 3 Feature Highlights in a Row */}
+        <div className={styles.featuresRow}>
+          <div className={styles.featureItem}>
+            <div className={styles.iconCircle}>
+              <Scissors size={22} strokeWidth={1.8} className={styles.featureIcon} />
             </div>
-          ))}
+            <div className={styles.featureText}>
+              <h3 className={styles.featureTitle}>Skilled Barbers</h3>
+              <p className={styles.featureDesc}>
+                Experts in modern cuts, classic styles and detailed grooming.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.featureDivider} />
+
+          <div className={styles.featureItem}>
+            <div className={styles.iconCircle}>
+              <Handshake size={22} strokeWidth={1.8} className={styles.featureIcon} />
+            </div>
+            <div className={styles.featureText}>
+              <h3 className={styles.featureTitle}>Friendly Service</h3>
+              <p className={styles.featureDesc}>
+                A welcoming environment where every client feels at home.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.featureDivider} />
+
+          <div className={styles.featureItem}>
+            <div className={styles.iconCircle}>
+              <CombIcon size={22} className={styles.featureIcon} />
+            </div>
+            <div className={styles.featureText}>
+              <h3 className={styles.featureTitle}>Modern Techniques</h3>
+              <p className={styles.featureDesc}>
+                Combining traditional barbering with the latest trends and tools.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Centered CTA Button */}
+        <div className={styles.btnRow}>
+          <Link href="/booking" className={styles.teamBtn}>
+            <span>MEET OUR TEAM</span>
+            <ArrowRight size={15} />
+          </Link>
         </div>
       </div>
     </section>
