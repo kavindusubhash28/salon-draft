@@ -64,9 +64,8 @@ export default function ServicePackages() {
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className={`${styles.card} ${
-                pkg.popular ? styles.popularCard : ""
-              }`}
+              className={`${styles.card} ${pkg.popular ? styles.popularCard : ""
+                }`}
             >
               {pkg.popular && (
                 <div className={styles.popularBadge}>MOST POPULAR</div>

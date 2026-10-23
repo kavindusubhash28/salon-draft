@@ -2,75 +2,83 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
-import {
-  REAL_GOOGLE_REVIEWS,
-  GOOGLE_RATING_SUMMARY,
-} from "@/lib/google-reviews";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import styles from "./Testimonials.module.css";
 
-// Official Google Multi-color 'G' Logo SVG
-function GoogleGLogo({ size = 16 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      style={{ display: "inline-block", verticalAlign: "middle" }}
-    >
-      <path
-        fill="#4285F4"
-        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"
-      />
-      <path
-        fill="#34A853"
-        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"
-      />
-      <path
-        fill="#FBBC05"
-        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.16 0 9.97 0 12c0 2.03.45 3.84 1.25 5.42l4.03-3.15z"
-      />
-      <path
-        fill="#EA4335"
-        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
-      />
-    </svg>
-  );
-}
-
 export default function Testimonials() {
+  const googleReviews = [
+    {
+      id: 1,
+      author: "Yoshell Delile",
+      rating: 5,
+      timeAgo: "a month ago",
+      quote:
+        "“After quite a hectic search for a good salon, I recently visited Three Brothers Salon Cuts, and honestly, I'm glad I did! The customer service was exceptional, the staff was friendly, and the results were flawless. Highly recommended!”",
+    },
+    {
+      id: 2,
+      author: "Thishari Hayesha",
+      rating: 5,
+      timeAgo: "4 months ago",
+      quote:
+        "“Three brothers saloon cuts is excellent. I went there for hairstyling, makeup, a facial, and eyebrow shaping. All of the staff were very friendly and supportive. The customer service was also of a very high standard. Especially, Miss Ganga, who provided my services, is highly experienced and skilled. I was very happy with the final results. I would highly recommend this salon to anyone looking for quality services.”",
+    },
+    {
+      id: 3,
+      author: "chasini imaya",
+      rating: 5,
+      timeAgo: "10 months ago",
+      quote:
+        "“Thank you so much 'Three brothers'.. Specially Nimesha, Ganga & Rithu. The service was exceptional; each of us (my friend & I) received a customized treatment, and the staff was very friendly and skilled. Truly a wonderful experience!”",
+    },
+    {
+      id: 4,
+      author: "Ishara Nilakshana Ekanayake",
+      rating: 5,
+      timeAgo: "3 months ago",
+      quote:
+        "“A huge thank you to Rojer and the amazing crew at Three Brothers Salon Cuts for making me feel so beautiful on my special day! Exceptional attention to detail, hospitality, and brilliant styling.”",
+    },
+    {
+      id: 5,
+      author: "Chathurika samarasinghe",
+      rating: 5,
+      timeAgo: "5 months ago",
+      quote:
+        "“Very good customer service and I really like the work done on me. Thank you so much Three Brothers. The professional lady did my layer cuts and eyebrows done by Nimesha. She is a kindly girl and very talented. 👌”",
+    },
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reviews = REAL_GOOGLE_REVIEWS;
-  const current = reviews[currentIndex];
-
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? googleReviews.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === googleReviews.length - 1 ? 0 : prev + 1));
   };
 
-  // Auto-play carousel every 7 seconds, pauses when user hovers
+  // Auto transition every 6 seconds, pauses on hover
   useEffect(() => {
     if (isPaused) return;
 
     timerRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
-    }, 7000);
+      setCurrentIndex((prev) => (prev === googleReviews.length - 1 ? 0 : prev + 1));
+    }, 6500);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isPaused, reviews.length]);
+  }, [isPaused, googleReviews.length]);
+
+  const current = googleReviews[currentIndex];
 
   return (
     <section className={styles.section} id="reviews">
-      {/* Background salon ambiance image with warm overlay */}
+      {/* Background salon ambiance image with soft overlay */}
       <div className={styles.bgContainer}>
         <Image
           src="/images/client_words_bg.jpg"
@@ -90,7 +98,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* Quote Carousel — Open & Seamless (No box) */}
+        {/* Quote Carousel (No boxes, pure open editorial style) */}
         <div
           className={styles.carouselWrapper}
           onMouseEnter={() => setIsPaused(true)}
@@ -99,64 +107,41 @@ export default function Testimonials() {
           <button
             onClick={prevSlide}
             className={styles.navBtn}
-            aria-label="Previous testimonial"
+            aria-label="Previous Google review"
           >
             <ChevronLeft size={20} />
           </button>
 
-          <div className={styles.quoteArea}>
-            {/* 5 Stars */}
+          <div className={styles.quoteBox}>
+            {/* Stars */}
             <div className={styles.starsRow}>
               {[...Array(current.rating)].map((_, i) => (
                 <Star
                   key={i}
                   size={18}
-                  className={styles.starIcon}
                   fill="#c5925a"
                   color="#c5925a"
                 />
               ))}
             </div>
 
-            {/* Quote Text */}
-            <p className={styles.quoteText}>
-              &ldquo;{current.content}&rdquo;
-            </p>
+            {/* Review Quote */}
+            <p className={styles.quoteText}>{current.quote}</p>
 
-            {/* Author Attribution */}
-            <div className={styles.authorSection}>
-              <div className={styles.authorMain}>
-                <span className={styles.authorName}>{current.author}</span>
-                <span className={styles.verifiedTag}>
-                  <GoogleGLogo size={14} />
-                  <span>Verified Google Review</span>
-                </span>
-              </div>
-
-              <div className={styles.metaRow}>
-                {current.stylistMentioned && (
-                  <span className={styles.metaItem}>
-                    Stylist: <strong className={styles.stylistHighlight}>{current.stylistMentioned}</strong>
-                  </span>
-                )}
-                {current.services && current.services.length > 0 && (
-                  <>
-                    <span className={styles.metaDot}>•</span>
-                    <span className={styles.metaItem}>
-                      {current.services.join(", ")}
-                    </span>
-                  </>
-                )}
-                <span className={styles.metaDot}>•</span>
-                <span className={styles.metaTime}>{current.timeAgo}</span>
-              </div>
+            {/* Who put it */}
+            <div className={styles.authorRow}>
+              <span className={styles.authorName}>— {current.author}</span>
+              <span className={styles.authorDot}>•</span>
+              <span className={styles.authorSource}>Google Review</span>
+              <span className={styles.authorDot}>•</span>
+              <span className={styles.authorTime}>{current.timeAgo}</span>
             </div>
           </div>
 
           <button
             onClick={nextSlide}
             className={styles.navBtn}
-            aria-label="Next testimonial"
+            aria-label="Next Google review"
           >
             <ChevronRight size={20} />
           </button>
@@ -164,32 +149,16 @@ export default function Testimonials() {
 
         {/* Pagination Dots */}
         <div className={styles.dotsRow}>
-          {reviews.map((rev, index) => (
+          {googleReviews.map((_, index) => (
             <button
-              key={rev.id}
+              key={index}
               onClick={() => setCurrentIndex(index)}
               className={`${styles.dot} ${
                 currentIndex === index ? styles.activeDot : ""
               }`}
-              aria-label={`Go to testimonial ${index + 1}`}
+              aria-label={`Go to review ${index + 1}`}
             />
           ))}
-        </div>
-
-        {/* Subtle, Elegant Google Trust Link */}
-        <div className={styles.googleFooter}>
-          <a
-            href={GOOGLE_RATING_SUMMARY.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.googleLink}
-          >
-            <GoogleGLogo size={16} />
-            <span>Rated <strong>5.0</strong> on Google Reviews</span>
-            <span className={styles.linkDot}>•</span>
-            <span className={styles.actionText}>Read all reviews on Google Maps</span>
-            <ExternalLink size={13} className={styles.linkIcon} />
-          </a>
         </div>
       </div>
     </section>
