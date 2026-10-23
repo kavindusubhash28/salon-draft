@@ -1,0 +1,337 @@
+.section {
+  width: 100%;
+  padding: 4.5rem 1.5rem 5.5rem;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Light Theme (Section 01 - Men's Work) */
+.lightTheme {
+  background-color: #ffffff;
+  color: #1a1614;
+}
+
+.lightTheme .sectionNumber {
+  color: #1a1614;
+}
+
+.lightTheme .numberLine {
+  background-color: #1a1614;
+}
+
+.lightTheme .headingMain {
+  color: #1a1614;
+}
+
+.lightTheme .filterBtn {
+  color: #332d28;
+}
+
+.lightTheme .filterBtn:hover {
+  color: #b37346;
+}
+
+/* Dark Theme (Section 02 - Ladies' Work) */
+.darkTheme {
+  background-color: #0e0c0a;
+  color: #f7f3ed;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.darkTheme .sectionNumber {
+  color: #ffffff;
+}
+
+.darkTheme .numberLine {
+  background-color: #ffffff;
+}
+
+.darkTheme .headingMain {
+  color: #ffffff;
+}
+
+.darkTheme .filterBtn {
+  color: #c9c0b5;
+}
+
+.darkTheme .filterBtn:hover {
+  color: #ffffff;
+}
+
+/* Section Header Row */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.numberBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.sectionNumber {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.numberLine {
+  width: 24px;
+  height: 1.5px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.headingHighlight {
+  color: #b37346;
+}
+
+/* Category Filter Pills */
+.filterPills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterBtn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.15rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activeFilter {
+  background-color: #b37346 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(179, 115, 70, 0.25);
+}
+
+/* 5-Column Grid for ALL */
+.columnsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+/* Consecutive Packed Grid for Filtered View (Zero Gaps) */
+.filteredGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Box Sizing */
+.box {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.boxTall {
+  height: 380px;
+}
+
+.boxShort {
+  height: 200px;
+}
+
+.boxStandard {
+  height: 284px;
+}
+
+/* Real Image Display (when user adds an image later) */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.realImg {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.box:hover .realImg {
+  transform: scale(1.05);
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.box:hover .imgOverlay {
+  opacity: 1;
+}
+
+.overlayTitle {
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Empty Box Styling - Completely Clean without text */
+.emptyBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Light Theme Empty Box */
+.lightTheme .emptyBox {
+  background-color: #f7f3ec;
+  border: 1.5px dashed rgba(179, 115, 70, 0.35);
+}
+
+.lightTheme .box:hover .emptyBox {
+  border-color: #b37346;
+  background-color: #eee7dc;
+}
+
+/* Dark Theme Empty Box */
+.darkTheme .emptyBox {
+  background-color: #171412;
+  border: 1.5px dashed rgba(179, 115, 70, 0.28);
+}
+
+.darkTheme .box:hover .emptyBox {
+  border-color: #b37346;
+  background-color: #211c19;
+}
+
+.emptyCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plusIcon {
+  color: #b37346;
+  opacity: 0.28;
+  transition: all 0.25s ease;
+}
+
+.box:hover .plusIcon {
+  opacity: 0.85;
+  transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1080px) {
+  .columnsGrid,
+  .filteredGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .boxTall,
+  .boxShort,
+  .boxStandard {
+    height: 260px;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 3.5rem 1rem 4.5rem;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .columnsGrid,
+  .filteredGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .column {
+    gap: 8px;
+  }
+
+  .boxTall,
+  .boxShort,
+  .boxStandard {
+    height: 220px;
+  }
+
+  .filterPills {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .filterBtn {
+    font-size: 0.68rem;
+    padding: 0.4rem 0.85rem;
+    white-space: nowrap;
+  }
+}

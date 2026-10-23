@@ -14,8 +14,8 @@ export default function WorkHero() {
             <span className={styles.titleHighlight}>Real Styles.</span>
           </h1>
           <p className={styles.description}>
-            A collection of cuts, colours and grooming styles created at Three
-            Brothers Salon Cuts.
+            A collection of our recent work, showcasing the skill and
+            creativity of our team.
           </p>
         </div>
       </div>
