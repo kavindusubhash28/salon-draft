@@ -25,22 +25,38 @@
 
 .heroImg {
   object-fit: cover;
-  object-position: right 35%;
+  object-position: 72% 15%;
+}
+
+@media (max-width: 768px) {
+  .heroImg {
+    object-position: center 20%;
+  }
 }
 
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right,
+  background: 
+    linear-gradient(
+      to right,
       rgba(16, 13, 11, 0.94) 0%,
-      rgba(16, 13, 11, 0.85) 45%,
-      rgba(16, 13, 11, 0.4) 75%,
-      rgba(16, 13, 11, 0.2) 100%);
+      rgba(16, 13, 11, 0.84) 40%,
+      rgba(16, 13, 11, 0.45) 70%,
+      rgba(16, 13, 11, 0.2) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(16, 13, 11, 0.75) 0%,
+      transparent 22%,
+      transparent 75%,
+      rgba(16, 13, 11, 0.95) 100%
+    );
 }
 
 @media (max-width: 768px) {
   .heroOverlay {
-    background: rgba(16, 13, 11, 0.88);
+    background: rgba(16, 13, 11, 0.84);
   }
 }
 
@@ -101,22 +117,4 @@
   color: #b5ada4;
   margin: 0;
   max-width: 480px;
-}
-
-@media (max-width: 640px) {
-  .cardFooterBar {
-    padding: 0.85rem 1rem;
-    gap: 0.3rem;
-  }
-
-  .footerQuote {
-    font-size: 0.88rem;
-    line-height: 1.35;
-  }
-
-  .footerSub {
-    font-size: 0.64rem;
-    letter-spacing: 0.06em;
-    line-height: 1.35;
-  }
 }

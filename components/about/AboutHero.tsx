@@ -7,8 +7,8 @@ export default function AboutHero() {
     <section className={styles.heroSection}>
       <div className={styles.imageContainer}>
         <Image
-          src="/images/experience_chair.jpg"
-          alt="Three Brothers Barber Studio Heritage"
+          src="/images/about_hero_team.jpg"
+          alt="Three Brothers Salon Cuts Team Grand Opening"
           fill
           priority
           className={styles.heroImg}
