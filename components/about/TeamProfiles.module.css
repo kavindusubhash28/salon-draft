@@ -184,26 +184,6 @@
   }
 }
 
-.ornamentLine {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-}
-
-.flourishLine {
-  width: 48px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.flourishDiamond {
-  width: 6px;
-  height: 6px;
-  background: #c5925a;
-  transform: rotate(45deg);
-}
-
 /* 3 Features Row */
 .featuresRow {
   display: flex;

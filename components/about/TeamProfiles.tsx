@@ -78,16 +78,11 @@ export default function TeamProfiles() {
           {/* Vignette & Gradient Overlays */}
           <div className={styles.gradientOverlay} />
 
-          {/* Cursive Quote and Ornament on lower-third of photo */}
+          {/* Cursive Quote on lower-third of photo */}
           <div className={styles.overlayContent}>
             <p className={styles.scriptQuote}>
               Walk in, sit back, and let our team bring your best look to life.
             </p>
-            <div className={styles.ornamentLine}>
-              <span className={styles.flourishLine} />
-              <span className={styles.flourishDiamond} />
-              <span className={styles.flourishLine} />
-            </div>
           </div>
         </div>
 
@@ -136,7 +131,7 @@ export default function TeamProfiles() {
 
         {/* Centered CTA Button */}
         <div className={styles.btnRow}>
-          <Link href="/booking" className={styles.teamBtn}>
+          <Link href="/contact" className={styles.teamBtn}>
             <span>MEET OUR TEAM</span>
             <ArrowRight size={15} />
           </Link>

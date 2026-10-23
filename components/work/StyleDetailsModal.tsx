@@ -62,7 +62,7 @@ export default function StyleDetailsModal({ item, onClose }: Props) {
             </div>
 
             <Link
-              href={`/booking?style=${encodeURIComponent(item.title)}&stylist=${encodeURIComponent(
+              href={`/contact?style=${encodeURIComponent(item.title)}&stylist=${encodeURIComponent(
                 item.stylist
               )}`}
               className={styles.bookBtn}

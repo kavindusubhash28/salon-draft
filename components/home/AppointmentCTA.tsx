@@ -29,7 +29,7 @@ export default function AppointmentCTA() {
             Visit us at the salon or get in touch to reserve your time.
           </p>
 
-          <Link href="/booking" className={styles.bookBtn}>
+          <Link href="/contact" className={styles.bookBtn}>
             <span>BOOK AN APPOINTMENT</span>
             <ArrowRight size={15} />
           </Link>

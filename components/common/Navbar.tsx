@@ -117,7 +117,7 @@ export default function Navbar() {
           {/* When scrolled: Show luxury Hamburger Icon Button on all viewports */}
           {isScrolled ? (
             <>
-              <Link href="/booking" className={styles.bookBtn}>
+              <Link href="/contact" className={styles.bookBtn}>
                 <Calendar size={14} />
                 <span>Book Appointment</span>
               </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
           ) : (
             <>
               {/* When at top: Show regular Book button and mobile toggle */}
-              <Link href="/booking" className={styles.bookBtn}>
+              <Link href="/contact" className={styles.bookBtn}>
                 <Calendar size={14} />
                 <span>Book Appointment</span>
                 <ArrowRight size={13} />
@@ -233,7 +233,7 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="/booking"
+                href="/contact"
                 className={styles.drawerBookBtn}
                 onClick={() => setDrawerOpen(false)}
               >

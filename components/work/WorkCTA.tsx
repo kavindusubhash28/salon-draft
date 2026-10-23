@@ -17,7 +17,7 @@ export default function WorkCTA() {
           <p className={styles.subtitle}>
             Book an appointment and let us create a style that fits you.
           </p>
-          <Link href="/booking" className={styles.bookBtn}>
+          <Link href="/contact" className={styles.bookBtn}>
             <span>BOOK AN APPOINTMENT</span>
             <ArrowRight size={15} className={styles.btnArrow} />
           </Link>

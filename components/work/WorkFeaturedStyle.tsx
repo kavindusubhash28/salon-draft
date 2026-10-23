@@ -131,7 +131,7 @@ export default function WorkFeaturedStyle() {
           </div>
 
           {/* Action Button */}
-          <Link href="/booking" className={styles.bookBtn}>
+          <Link href="/contact" className={styles.bookBtn}>
             <span>BOOK THIS STYLE</span>
             <ArrowRight size={16} className={styles.btnArrow} />
           </Link>

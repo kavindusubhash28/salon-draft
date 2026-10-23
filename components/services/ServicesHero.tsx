@@ -35,7 +35,7 @@ export default function ServicesHero() {
           </p>
 
           <div className={styles.btnRow}>
-            <Link href="/booking" className={styles.bookBtn}>
+            <Link href="/contact" className={styles.bookBtn}>
               <Calendar size={15} />
               <span>Book Now</span>
               <ArrowRight size={15} />

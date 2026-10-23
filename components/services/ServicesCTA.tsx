@@ -39,7 +39,7 @@ export default function ServicesCTA() {
             </p>
 
             <div className={styles.btnRow}>
-              <Link href="/booking" className={styles.primaryBtn}>
+              <Link href="/contact" className={styles.primaryBtn}>
                 <Calendar size={15} />
                 <span>Book Appointment</span>
                 <ArrowRight size={15} />

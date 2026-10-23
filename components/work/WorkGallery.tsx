@@ -122,7 +122,7 @@ export default function WorkGallery() {
           {filteredItems.map((item) => (
             <Link
               key={item.id}
-              href="/booking"
+              href="/contact"
               className={styles.card}
               aria-label={`View style details for ${item.title}`}
             >
