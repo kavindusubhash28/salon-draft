@@ -90,7 +90,7 @@
   flex: 1;
   display: grid;
   grid-template-columns: 1fr;
-  align-items: flex-end;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -98,8 +98,8 @@
   .heroContainer {
     grid-template-columns: 0.8fr 1.45fr;
     gap: 2.5rem;
-    padding: 1.5rem 3rem 1.25rem;
-    align-items: flex-end;
+    padding: 1.5rem 3rem 1.5rem;
+    align-items: center;
   }
 }
 
@@ -108,7 +108,8 @@
   position: relative;
   z-index: 4;
   max-width: 540px;
-  margin-bottom: 2rem;
+  align-self: center;
+  transform: translateY(-30px);
 }
 
 .animatedContent {

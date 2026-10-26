@@ -80,7 +80,6 @@ const SERVICES_SHOWCASE: ServicesHeroService[] = [
     subtitle: "Relaxing foot bath, scrub, massage & grooming",
     description:
       "Indulge in soothing foot spa therapies, gentle exfoliating scrubs, nail care, and restorative massage designed for total relaxation from head to toe.",
-    badge: "Subject to confirmation",
     image: "/images/Services/nails.jpg",
     bgImage: "/images/Services/nails.jpg",
   },
