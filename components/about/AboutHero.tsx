@@ -7,10 +7,11 @@ export default function AboutHero() {
     <section className={styles.heroSection}>
       <div className={styles.imageContainer}>
         <Image
-          src="/images/about_hero_team.jpg"
-          alt="Three Brothers Salon Cuts Team Grand Opening"
+          src="/images/about/hero.jpg"
+          alt="Three Brothers Salon Cuts Exterior"
           fill
           priority
+          sizes="100vw"
           className={styles.heroImg}
         />
         <div className={styles.heroOverlay} />

@@ -1,11 +1,22 @@
-"use client";
-
 import React from "react";
+import Image from "next/image";
 import styles from "./WorkHero.module.css";
 
 export default function WorkHero() {
   return (
     <section className={styles.heroSection}>
+      <div className={styles.imageContainer}>
+        <Image
+          src="/images/work_hero_clean_bg.jpg"
+          alt="Three Brothers Salon Cuts - Real People Real Styles"
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroImg}
+        />
+        <div className={styles.heroOverlay} />
+      </div>
+
       <div className={styles.container}>
         <div className={styles.contentBox}>
           <span className={styles.overline}>OUR WORK</span>
