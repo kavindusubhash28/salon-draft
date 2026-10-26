@@ -15,8 +15,31 @@ export default function FeaturedPrices() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="featured-prices">
       <div className={styles.container}>
+        {/* Decorative Floating Barber Craft Elements */}
+        <div className={styles.decorScissors} aria-hidden="true">
+          <Image
+            src="/images/barber_scissors.png"
+            alt=""
+            width={340}
+            height={310}
+            className={styles.toolImg}
+            priority
+          />
+        </div>
+
+        <div className={styles.decorBrush} aria-hidden="true">
+          <Image
+            src="/images/barber_brush.png"
+            alt=""
+            width={300}
+            height={210}
+            className={styles.toolImg}
+            priority
+          />
+        </div>
+
         <div className={styles.splitGrid}>
           {/* Left Column: Visual Showcase & Headline */}
           <div className={styles.visualCol}>
