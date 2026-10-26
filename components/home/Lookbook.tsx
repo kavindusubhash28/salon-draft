@@ -40,7 +40,7 @@ export default function Lookbook() {
           <div className={styles.galleryCol}>
             <div className={styles.tallImageWrap}>
               <Image
-                src="/images/lookbook_fade.jpg"
+                src="/images/Home/1.jpg"
                 alt="Modern Fade Haircut"
                 fill
                 className={styles.galleryImg}
@@ -54,7 +54,7 @@ export default function Lookbook() {
             <div className={styles.stackedItem}>
               <div className={styles.stackedImageWrap}>
                 <Image
-                  src="/images/lookbook_textured.jpg"
+                  src="/images/Home/2.jpg"
                   alt="Textured Style"
                   fill
                   className={styles.galleryImg}
@@ -66,8 +66,8 @@ export default function Lookbook() {
             <div className={styles.stackedItem}>
               <div className={styles.stackedImageWrap}>
                 <Image
-                  src="/images/lookbook_beard.jpg"
-                  alt="Beard Grooming"
+                  src="/images/Home/lookbook_3.jpg"
+                  alt="Master Barber Styling and Beard Grooming"
                   fill
                   className={styles.galleryImg}
                 />
@@ -80,7 +80,7 @@ export default function Lookbook() {
           <div className={styles.galleryCol}>
             <div className={styles.tallImageWrap}>
               <Image
-                src="/images/lookbook_creative.jpg"
+                src="/images/Home/4.jpg"
                 alt="Creative Cuts Razor Art"
                 fill
                 className={styles.galleryImg}
@@ -93,7 +93,7 @@ export default function Lookbook() {
           <div className={styles.galleryCol}>
             <div className={styles.tallImageWrap}>
               <Image
-                src="/images/lookbook_curly.jpg"
+                src="/images/Home/5.jpg"
                 alt="Natural Texture Hair"
                 fill
                 className={styles.galleryImg}
