@@ -65,12 +65,67 @@
   margin: 0;
 }
 
-/* 4 Cards Grid */
+/* Gents / Ladies Tabs */
+.tabList {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  width: fit-content;
+  margin: 0 auto 3rem;
+  padding: 0.35rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+
+.tab {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #b5ada4;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 2.25rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab:hover {
+  color: #ffffff;
+}
+
+.tab:focus-visible {
+  outline: 2px solid #c5925a;
+  outline-offset: 2px;
+}
+
+.tabActive,
+.tabActive:hover {
+  background: #c5925a;
+  color: #141110;
+}
+
+/* Cards Grid */
 .pricingGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 3rem;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 600px) {
