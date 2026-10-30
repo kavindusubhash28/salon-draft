@@ -21,7 +21,7 @@ export default function WorkPage() {
       <WorkHero />
       <WorkSection
         sectionNumber="01"
-        sectionName="MEN'S"
+        sectionName="GENTS'"
         sectionSuffix="WORK"
         theme="light"
         categories={MENS_CATEGORIES}
