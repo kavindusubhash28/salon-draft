@@ -1,18 +1,39 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import styles from "./FeaturedPrices.module.css";
 
-export default function FeaturedPrices() {
-  const priceItems = [
+type Audience = "gents" | "ladies";
+
+const tabs: { id: Audience; label: string }[] = [
+  { id: "gents", label: "GENTS" },
+  { id: "ladies", label: "LADIES" },
+];
+
+const priceItems: Record<Audience, { name: string; price: string }[]> = {
+  gents: [
     { name: "Gents Classic Haircut & Fade", price: "LKR 1,800+" },
-    { name: "Ladies Haircut & Layer Cut", price: "LKR 3,500+" },
     { name: "Beard Styling & Hot Towel Shave", price: "LKR 1,200+" },
-    { name: "Keratin & Deep Conditioning", price: "LKR 5,500+" },
-    { name: "Hydrafacial & Carbon Peel", price: "LKR 5,500+" },
-    { name: "Manicure & Jelly Pedicure", price: "LKR 2,200+" },
-  ];
+    { name: "Grey Coverage & Hair Fall Therapy", price: "LKR 2,800+" },
+    { name: "Charcoal Detox Facial", price: "LKR 4,200+" },
+    { name: "Gents Manicure & Pedicure", price: "LKR 1,800+" },
+    { name: "Executive Grooming Package", price: "LKR 6,500+" },
+  ],
+  ladies: [
+    { name: "Ladies Haircut & Layer Cut", price: "LKR 3,500+" },
+    { name: "Balayage & Highlights", price: "LKR 8,500+" },
+    { name: "Keratin & Hair Botox", price: "LKR 12,000+" },
+    { name: "Hydrafacial & Gold Facial", price: "LKR 6,000+" },
+    { name: "Gel Nails & Acrylic Extensions", price: "LKR 3,500+" },
+    { name: "Bridal Styling & Event Makeup", price: "LKR 5,500+" },
+  ],
+};
+
+export default function FeaturedPrices() {
+  const [activeTab, setActiveTab] = useState<Audience>("gents");
 
   return (
     <section className={styles.section} id="featured-prices">
@@ -69,8 +90,37 @@ export default function FeaturedPrices() {
 
           {/* Right Column: Price List */}
           <div className={styles.pricingCol}>
-            <div className={styles.priceList}>
-              {priceItems.map((item, index) => (
+            <div
+              className={styles.tabList}
+              role="tablist"
+              aria-label="Featured prices category"
+            >
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  role="tab"
+                  id={`featured-tab-${tab.id}`}
+                  aria-selected={activeTab === tab.id}
+                  aria-controls="featured-panel"
+                  className={`${styles.tab} ${
+                    activeTab === tab.id ? styles.tabActive : ""
+                  }`}
+                  onClick={() => setActiveTab(tab.id)}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            <div
+              key={activeTab}
+              id="featured-panel"
+              role="tabpanel"
+              aria-labelledby={`featured-tab-${activeTab}`}
+              className={styles.priceList}
+            >
+              {priceItems[activeTab].map((item, index) => (
                 <div key={index} className={styles.priceRow}>
                   <span className={styles.serviceName}>{item.name}</span>
                   <span className={styles.servicePrice}>{item.price}</span>
